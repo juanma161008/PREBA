@@ -1,0 +1,11 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/skyedge/obj/Debug/skyedge.formularios.frmnomina.resources
+/skyedge/obj/Debug/skyedge.formularios.frmmodificareserva.resources
+/skyedge/obj/Debug/skyedge.formularios.frmreserva.resources
+/skyedge/obj/Debug/skyedge.formularios.frmusuarionuevo.resources
+/skyedge/obj/Debug/skyedge.formularios.frmvuelo.resources
+/skyedge/obj/Debug/skyedge.formularios.frmvuelosdisponibles.resources
+/skyedge/obj/Debug/skyedge.pdb
