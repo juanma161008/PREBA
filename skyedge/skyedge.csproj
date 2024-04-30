@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB1BCEC9-0737-4C8B-9399-F4C4777E7499}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>skyedge</RootNamespace>
+    <AssemblyName>skyedge</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clases\Cconexion.cs" />
+    <Compile Include="formularios\frmempleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmempleado.Designer.cs">
+      <DependentUpon>frmempleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\frminfopasajeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frminfopasajeros.Designer.cs">
+      <DependentUpon>frminfopasajeros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\frmmodificareserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmmodificareserva.Designer.cs">
+      <DependentUpon>frmmodificareserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\frmnomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmnomina.Designer.cs">
+      <DependentUpon>frmnomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\frmreserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmreserva.Designer.cs">
+      <DependentUpon>frmreserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\frmusuarionuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmusuarionuevo.Designer.cs">
+      <DependentUpon>frmusuarionuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmlogin.Designer.cs">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\frmvuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmvuelo.Designer.cs">
+      <DependentUpon>frmvuelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\frmvuelosdisponibles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmvuelosdisponibles.Designer.cs">
+      <DependentUpon>frmvuelosdisponibles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formularios\frmempleado.resx">
+      <DependentUpon>frmempleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frminfopasajeros.resx">
+      <DependentUpon>frminfopasajeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmmodificareserva.resx">
+      <DependentUpon>frmmodificareserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmnomina.resx">
+      <DependentUpon>frmnomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmreserva.resx">
+      <DependentUpon>frmreserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmusuarionuevo.resx">
+      <DependentUpon>frmusuarionuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmlogin.resx">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmvuelo.resx">
+      <DependentUpon>frmvuelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmvuelosdisponibles.resx">
+      <DependentUpon>frmvuelosdisponibles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

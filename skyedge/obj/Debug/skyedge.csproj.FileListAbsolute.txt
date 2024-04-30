@@ -1,0 +1,12 @@
+C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\obj\Debug\skyedge.csproj.AssemblyReference.cache
+C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\obj\Debug\skyedge.formularios.frmlogin.resources
+C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\obj\Debug\skyedge.Properties.Resources.resources
+C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\obj\Debug\skyedge.csproj.GenerateResource.cache
+C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\obj\Debug\skyedge.csproj.CoreCompileInputs.cache
+C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\bin\Debug\skyedge.exe.config
+C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\bin\Debug\skyedge.exe
+C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\bin\Debug\skyedge.pdb
+C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\obj\Debug\skyedge.exe
+C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\obj\Debug\skyedge.pdb
+C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\obj\Debug\skyedge.formularios.frmreserva.resources
+C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\obj\Debug\skyedge.formularios.frmcliente.resources
