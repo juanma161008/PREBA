@@ -10,3 +10,21 @@ C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\obj\Debug\skyedge.ex
 C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\obj\Debug\skyedge.pdb
 C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\obj\Debug\skyedge.formularios.frmreserva.resources
 C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\obj\Debug\skyedge.formularios.frmcliente.resources
+C:\Users\candr\Source\Repos\skyedge1\skyedge\bin\Debug\skyedge.exe.config
+C:\Users\candr\Source\Repos\skyedge1\skyedge\bin\Debug\skyedge.exe
+C:\Users\candr\Source\Repos\skyedge1\skyedge\bin\Debug\skyedge.pdb
+C:\Users\candr\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.csproj.AssemblyReference.cache
+C:\Users\candr\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.formularios.frmempleado.resources
+C:\Users\candr\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.formularios.frminfopasajeros.resources
+C:\Users\candr\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.formularios.frmmodificareserva.resources
+C:\Users\candr\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.formularios.frmnomina.resources
+C:\Users\candr\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.formularios.frmreserva.resources
+C:\Users\candr\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.formularios.frmusuarionuevo.resources
+C:\Users\candr\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.formularios.frmlogin.resources
+C:\Users\candr\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.formularios.frmvuelo.resources
+C:\Users\candr\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.formularios.frmvuelosdisponibles.resources
+C:\Users\candr\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.Properties.Resources.resources
+C:\Users\candr\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.csproj.GenerateResource.cache
+C:\Users\candr\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.csproj.CoreCompileInputs.cache
+C:\Users\candr\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.exe
+C:\Users\candr\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.pdb
