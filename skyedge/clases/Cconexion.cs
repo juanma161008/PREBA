@@ -11,7 +11,7 @@ namespace skyedge.clases
     class Cconexion
     {
         //Se define la ruta de la base de datos
-        static private string CadenaConexion = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\JUAN MANUEL CARDENAS\Documents\POB\skyedge\skyedge\dbskyedge.mdf;Integrated Security=True;Connect Timeout=30";
+        static private string CadenaConexion = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\candr\source\repos\skyedge1\skyedge\dbskyedge.mdf;Integrated Security=True;Connect Timeout=30";
 
         //Definir una variable para cargar la base de datos
         private SqlConnection Conexion = new SqlConnection(CadenaConexion);

@@ -34,19 +34,20 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtpassword = new System.Windows.Forms.TextBox();
+            this.linkregistrarse = new System.Windows.Forms.LinkLabel();
+            this.btnlogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtemail
             // 
             this.txtemail.Location = new System.Drawing.Point(30, 174);
-            this.txtemail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtemail.Margin = new System.Windows.Forms.Padding(2);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(227, 20);
             this.txtemail.TabIndex = 0;
+            this.txtemail.TextChanged += new System.EventHandler(this.txtemail_TextChanged);
             // 
             // label1
             // 
@@ -76,38 +77,41 @@
             this.label2.Text = "Password";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // txtpassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(32, 236);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(224, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtpassword.Location = new System.Drawing.Point(32, 236);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.Size = new System.Drawing.Size(224, 20);
+            this.txtpassword.TabIndex = 3;
+            this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             // 
-            // linkLabel1
+            // linkregistrarse
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(31, 265);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(60, 13);
-            this.linkLabel1.TabIndex = 4;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Registrarse";
+            this.linkregistrarse.AutoSize = true;
+            this.linkregistrarse.BackColor = System.Drawing.Color.Transparent;
+            this.linkregistrarse.LinkColor = System.Drawing.Color.White;
+            this.linkregistrarse.Location = new System.Drawing.Point(31, 265);
+            this.linkregistrarse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkregistrarse.Name = "linkregistrarse";
+            this.linkregistrarse.Size = new System.Drawing.Size(60, 13);
+            this.linkregistrarse.TabIndex = 4;
+            this.linkregistrarse.TabStop = true;
+            this.linkregistrarse.Text = "Registrarse";
+            this.linkregistrarse.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkregistrarse_LinkClicked);
             // 
-            // button1
+            // btnlogin
             // 
-            this.button1.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(80, 292);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 31);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnlogin.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin.ForeColor = System.Drawing.Color.Black;
+            this.btnlogin.Location = new System.Drawing.Point(80, 292);
+            this.btnlogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnlogin.Name = "btnlogin";
+            this.btnlogin.Size = new System.Drawing.Size(110, 31);
+            this.btnlogin.TabIndex = 5;
+            this.btnlogin.Text = "Login";
+            this.btnlogin.UseVisualStyleBackColor = true;
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // label3
             // 
@@ -131,14 +135,14 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(679, 459);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnlogin);
+            this.Controls.Add(this.linkregistrarse);
+            this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtemail);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmlogin";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "frmlogin";
@@ -154,9 +158,9 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtpassword;
+        private System.Windows.Forms.LinkLabel linkregistrarse;
+        private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.Label label3;
     }
 }
