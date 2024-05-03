@@ -38,9 +38,11 @@
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.txtapellidos = new System.Windows.Forms.TextBox();
             this.txttelefono = new System.Windows.Forms.TextBox();
-            this.textemail = new System.Windows.Forms.TextBox();
+            this.txtemail = new System.Windows.Forms.TextBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtCedula = new System.Windows.Forms.TextBox();
             this.btnguardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +59,6 @@
             this.label1.Size = new System.Drawing.Size(531, 47);
             this.label1.TabIndex = 0;
             this.label1.Text = "REGISTRO DE USUARIOS NUEVOS";
-            
             // 
             // label2
             // 
@@ -76,7 +77,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(43, 134);
+            this.label3.Location = new System.Drawing.Point(43, 179);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 27);
@@ -88,7 +89,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(43, 171);
+            this.label4.Location = new System.Drawing.Point(43, 216);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 27);
@@ -127,7 +128,6 @@
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(158, 20);
             this.txtnombre.TabIndex = 5;
-            
             // 
             // txtapellidos
             // 
@@ -136,7 +136,6 @@
             this.txtapellidos.Name = "txtapellidos";
             this.txtapellidos.Size = new System.Drawing.Size(158, 20);
             this.txtapellidos.TabIndex = 6;
-            
             // 
             // txttelefono
             // 
@@ -145,32 +144,31 @@
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(158, 20);
             this.txttelefono.TabIndex = 7;
-            
             // 
-            // textemail
+            // txtemail
             // 
-            this.textemail.Location = new System.Drawing.Point(154, 134);
-            this.textemail.Margin = new System.Windows.Forms.Padding(2);
-            this.textemail.Name = "textemail";
-            this.textemail.Size = new System.Drawing.Size(158, 20);
-            this.textemail.TabIndex = 8;
-            
+            this.txtemail.Location = new System.Drawing.Point(154, 179);
+            this.txtemail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(158, 20);
+            this.txtemail.TabIndex = 8;
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(154, 171);
+            this.txtpassword.Location = new System.Drawing.Point(154, 216);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(158, 20);
             this.txtpassword.TabIndex = 9;
-            
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.txtCedula);
             this.panel1.Controls.Add(this.btnguardar);
             this.panel1.Controls.Add(this.txtpassword);
-            this.panel1.Controls.Add(this.textemail);
+            this.panel1.Controls.Add(this.txtemail);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
@@ -182,14 +180,35 @@
             this.panel1.Location = new System.Drawing.Point(323, 145);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(376, 263);
+            this.panel1.Size = new System.Drawing.Size(376, 305);
             this.panel1.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(44, 139);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 27);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "CEDULA";
+            // 
+            // txtCedula
+            // 
+            this.txtCedula.Location = new System.Drawing.Point(155, 139);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(158, 20);
+            this.txtCedula.TabIndex = 12;
+            this.txtCedula.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnguardar
             // 
             this.btnguardar.BackColor = System.Drawing.Color.SlateBlue;
             this.btnguardar.ForeColor = System.Drawing.Color.White;
-            this.btnguardar.Location = new System.Drawing.Point(142, 221);
+            this.btnguardar.Location = new System.Drawing.Point(143, 253);
             this.btnguardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(104, 29);
@@ -227,9 +246,11 @@
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.TextBox txtapellidos;
         private System.Windows.Forms.TextBox txttelefono;
-        private System.Windows.Forms.TextBox textemail;
+        private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnguardar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtCedula;
     }
 }

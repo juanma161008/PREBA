@@ -14,62 +14,41 @@ namespace skyedge.formularios
 {
     public partial class frmusuarionuevo : Form
     {
+        Cconexion cn;
+        SqlCommand cmd;
+        SqlDataAdapter da;
+        DataTable dt;
+        int contador, i, boton;
+
+       
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         public frmusuarionuevo()
         {
             InitializeComponent();
+            cn = new Cconexion();
+            i = 0; boton = 0;
+            cmd = new SqlCommand("select * from tblUsuario", cn.AbrirConexion());
+            da = new SqlDataAdapter(cmd);
+            dt = new DataTable();
+            da.Fill(dt);
         }
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            string nombre = txtnombre.Text.Trim();
-            string apellidos = txtapellidos.Text.Trim();
-            string telefono = txttelefono.Text.Trim();
-            string email = textemail.Text.Trim();
-            string password = txtpassword.Text.Trim();
+            cmd = new SqlCommand("insert into tblUsuario values('" + txtCedula.Text + "','" + txtnombre.Text + "','" + txtapellidos.Text + "','" + txttelefono.Text + "','"+ txtemail.Text + "','"+txtpassword.Text + "', 1)", cn.AbrirConexion());
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("empleado guardado");
 
-            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellidos) ||
-                string.IsNullOrEmpty(telefono) || string.IsNullOrEmpty(email) ||
-                string.IsNullOrEmpty(password))
-            {
-                MessageBox.Show("Completa Todos los Campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            this.Close();
 
-            Cconexion cn = new Cconexion();
-
-            string sqlInsert = "INSERT INTO tblUsuario (nombre, apellidos, telefono, email, contrasena) VALUES (@nombre, @apellidos, @telefono, @email, @contrasena)";
-
-            using (SqlConnection connection = cn.AbrirConexion())
-            {
-                using (SqlCommand cmd = new SqlCommand(sqlInsert, connection))
-                {
-
-                    cmd.Parameters.AddWithValue("@nombre", nombre);
-                    cmd.Parameters.AddWithValue("@apellidos", apellidos);
-                    cmd.Parameters.AddWithValue("@telefono", telefono);
-                    cmd.Parameters.AddWithValue("@email", email);
-
-                    cmd.Parameters.AddWithValue("@contrasena", password);
-
-                    int rowsAffected = cmd.ExecuteNonQuery();
-
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Usuario Guardado con Exito!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        frmlogin loginForm = new frmlogin();
-
-                        loginForm.Show();
-
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Un Error Ocurrio Guardando la Informacion.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-        }
+            frmlogin frmLogin = new frmlogin();
+            frmLogin.Show();
+        }   
 
        
     }

@@ -66,7 +66,7 @@ namespace skyedge.formularios
             Boolean est = false;
 
             cn = new Cconexion();
-            cmd = new SqlCommand("select * from tblusuario where idUsuario= '" + txtemail.Text + "' and contrasena ='" + txtpassword.Text + "'", cn.AbrirConexion());
+            cmd = new SqlCommand("select * from tblusuario where email= '" + txtemail.Text + "' and contrasena ='" + txtpassword.Text + "'", cn.AbrirConexion());
             da = new SqlDataAdapter(cmd);
             dt = new DataTable();
             da.Fill(dt);
@@ -86,7 +86,7 @@ namespace skyedge.formularios
                 {
                     MessageBox.Show("Fallaste!!!");
 
-                    cmd = new SqlCommand("UPDATE tblusuario SET estado ='" + est + "' WHERE idusuario ='" + txtemail.Text + "'", cn.AbrirConexion());
+                    cmd = new SqlCommand("UPDATE tblusuario SET estado ='" + est + "' WHERE email ='" + txtemail.Text + "'", cn.AbrirConexion());
 
                     cmd.ExecuteNonQuery();
                     this.Close();
