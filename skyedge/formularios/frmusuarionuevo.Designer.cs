@@ -41,9 +41,9 @@
             this.txtemail = new System.Windows.Forms.TextBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtCedula = new System.Windows.Forms.TextBox();
             this.btnguardar = new System.Windows.Forms.Button();
+            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -183,27 +183,6 @@
             this.panel1.Size = new System.Drawing.Size(376, 305);
             this.panel1.TabIndex = 1;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(44, 139);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 27);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "CEDULA";
-            // 
-            // txtCedula
-            // 
-            this.txtCedula.Location = new System.Drawing.Point(155, 139);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(158, 20);
-            this.txtCedula.TabIndex = 12;
-            this.txtCedula.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // btnguardar
             // 
             this.btnguardar.BackColor = System.Drawing.Color.SlateBlue;
@@ -216,6 +195,27 @@
             this.btnguardar.Text = "GUARDAR";
             this.btnguardar.UseVisualStyleBackColor = false;
             this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
+            // 
+            // txtCedula
+            // 
+            this.txtCedula.Location = new System.Drawing.Point(155, 139);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(158, 20);
+            this.txtCedula.TabIndex = 12;
+            this.txtCedula.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(44, 139);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 27);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "CEDULA";
             // 
             // frmusuarionuevo
             // 
