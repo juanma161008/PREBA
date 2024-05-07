@@ -63,49 +63,79 @@ namespace skyedge.formularios
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            Boolean est = false;
+            // Extract email domain
+            string email = txtemail.Text.Trim();
+            string domain = email.Split('@')[1];
 
+            // Validate email and password against the database
             cn = new Cconexion();
-            cmd = new SqlCommand("select * from tblusuario where email= '" + txtemail.Text + "' and contrasena ='" + txtpassword.Text + "'", cn.AbrirConexion());
-            da = new SqlDataAdapter(cmd);
-            dt = new DataTable();
-            da.Fill(dt);
+            cmd = new SqlCommand("SELECT * FROM tblUsuario WHERE email = @email AND contrasena = @password", cn.AbrirConexion());
+            cmd.Parameters.AddWithValue("@email", email);
+            cmd.Parameters.AddWithValue("@password", txtpassword.Text.Trim());
 
-            if (dt.Rows.Count == 0)
+            using (SqlDataAdapter da = new SqlDataAdapter(cmd))
             {
-                contador++;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
 
-                txtemail.Focus();
-
-                if (contador == 2)
+                // Check if login credentials are valid (assuming dt.Rows.Count > 0 indicates valid credentials)
+                if (dt.Rows.Count > 0)
                 {
-                    MessageBox.Show("solo te queda una oportunidad!!!");
-
+                    // Check domain conditions
+                    if (domain.Equals("skyedgecompany.com"))
+                    {
+                        // Redirect to frmnomina for skyedgecompany.com domain
+                        frmnomina nominaForm = new frmnomina();
+                        timer1.Stop();
+                        nominaForm.Show();
+                        this.Hide();
+                    }
+                    else if (domain.Equals("adminskyedgecompany.com"))
+                    {
+                        // Redirect to frmmenu for adminskyedgecompany.com domain
+                        frmmenu menuForm = new frmmenu();
+                        timer1.Stop();
+                        menuForm.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        // Redirect to frmreserva for other domains
+                        frmreserva reservaForm = new frmreserva();
+                        timer1.Stop();
+                        reservaForm.Show();
+                        this.Hide();
+                    }
                 }
-                if (contador == 3)
+                else
                 {
-                    MessageBox.Show("Fallaste!!!");
+                    // Invalid credentials - Increase counter and display message
+                    contador++;
 
-                    cmd = new SqlCommand("UPDATE tblusuario SET estado ='" + est + "' WHERE email ='" + txtemail.Text + "'", cn.AbrirConexion());
+                    txtemail.Focus();
 
-                    cmd.ExecuteNonQuery();
-                    this.Close();
+                    if (contador == 2)
+                    {
+                        MessageBox.Show("Solo te queda una oportunidad!!!");
+                    }
+                    if (contador == 3)
+                    {
+                        MessageBox.Show("Fallaste!!!");
 
+                        // Update user status to inactive (replace with your logic)
+                        cmd.CommandText = "UPDATE tblusuario SET estado = @est WHERE email = @email";
+                        cmd.Parameters.AddWithValue("@est", false); // Assuming false indicates inactive
+                        cmd.ExecuteNonQuery();
 
-
+                        this.Close();
+                    }
                 }
             }
-            else
-            {
-                frmvuelo frm = new frmvuelo();
-                timer1.Stop();
-                frm.Show();
-                this.Hide();
 
-            }
-
+            // Clear text boxes after processing
             txtpassword.Clear();
             txtemail.Clear();
         }
+
     }
 }
