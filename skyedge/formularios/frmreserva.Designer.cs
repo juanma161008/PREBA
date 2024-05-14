@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmreserva));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnbuscar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dtpvuelta = new System.Windows.Forms.DateTimePicker();
+            this.dtpida = new System.Windows.Forms.DateTimePicker();
+            this.cmbdestino = new System.Windows.Forms.ComboBox();
+            this.cmbpasajeros = new System.Windows.Forms.ComboBox();
+            this.cmbclase = new System.Windows.Forms.ComboBox();
+            this.cmbdireccion = new System.Windows.Forms.ComboBox();
+            this.cmborigen = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -52,111 +52,116 @@
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnbuscar);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(-5, 117);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1236, 259);
             this.panel2.TabIndex = 1;
+ 
             // 
-            // button1
+            // btnbuscar
             // 
-            this.button1.Location = new System.Drawing.Point(915, 197);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 34);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Buscar vuelo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnbuscar.BackColor = System.Drawing.Color.MediumOrchid;
+            this.btnbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscar.ForeColor = System.Drawing.Color.White;
+            this.btnbuscar.Location = new System.Drawing.Point(915, 197);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(168, 34);
+            this.btnbuscar.TabIndex = 2;
+            this.btnbuscar.Text = "Buscar vuelo";
+            this.btnbuscar.UseVisualStyleBackColor = false;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.dateTimePicker2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.comboBox5);
-            this.panel1.Controls.Add(this.comboBox4);
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.dtpvuelta);
+            this.panel1.Controls.Add(this.dtpida);
+            this.panel1.Controls.Add(this.cmbdestino);
+            this.panel1.Controls.Add(this.cmbpasajeros);
+            this.panel1.Controls.Add(this.cmbclase);
+            this.panel1.Controls.Add(this.cmbdireccion);
+            this.panel1.Controls.Add(this.cmborigen);
             this.panel1.Location = new System.Drawing.Point(179, 53);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(878, 124);
             this.panel1.TabIndex = 0;
             // 
-            // dateTimePicker2
+            // dtpvuelta
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(680, 61);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(154, 22);
-            this.dateTimePicker2.TabIndex = 11;
+            this.dtpvuelta.Location = new System.Drawing.Point(680, 61);
+            this.dtpvuelta.Name = "dtpvuelta";
+            this.dtpvuelta.Size = new System.Drawing.Size(154, 22);
+            this.dtpvuelta.TabIndex = 11;
             // 
-            // dateTimePicker1
+            // dtpida
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(496, 61);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(159, 22);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dtpida.Location = new System.Drawing.Point(496, 61);
+            this.dtpida.Name = "dtpida";
+            this.dtpida.Size = new System.Drawing.Size(159, 22);
+            this.dtpida.TabIndex = 10;
             // 
-            // comboBox5
+            // cmbdestino
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(246, 59);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(181, 24);
-            this.comboBox5.TabIndex = 9;
-            this.comboBox5.Text = "Destino";
+            this.cmbdestino.FormattingEnabled = true;
+            this.cmbdestino.Location = new System.Drawing.Point(246, 59);
+            this.cmbdestino.Name = "cmbdestino";
+            this.cmbdestino.Size = new System.Drawing.Size(181, 24);
+            this.cmbdestino.TabIndex = 9;
+            this.cmbdestino.Text = "Destino";
             // 
-            // comboBox4
+            // cmbpasajeros
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cmbpasajeros.FormattingEnabled = true;
+            this.cmbpasajeros.Items.AddRange(new object[] {
             "1 Pasajero",
             "2 Pasajero",
             "3 Pasajero",
             "4 Pasajero",
             "5 Pasajero",
             "6 Pasajero"});
-            this.comboBox4.Location = new System.Drawing.Point(373, 20);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(133, 24);
-            this.comboBox4.TabIndex = 8;
-            this.comboBox4.Text = "Pasajeros";
+            this.cmbpasajeros.Location = new System.Drawing.Point(373, 20);
+            this.cmbpasajeros.Name = "cmbpasajeros";
+            this.cmbpasajeros.Size = new System.Drawing.Size(133, 24);
+            this.cmbpasajeros.TabIndex = 8;
+            this.cmbpasajeros.Text = "Pasajeros";
             // 
-            // comboBox3
+            // cmbclase
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cmbclase.FormattingEnabled = true;
+            this.cmbclase.Items.AddRange(new object[] {
             "Economy ",
             "Bussinnes ",
             "First class"});
-            this.comboBox3.Location = new System.Drawing.Point(200, 20);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(133, 24);
-            this.comboBox3.TabIndex = 7;
-            this.comboBox3.Text = "Clase";
+            this.cmbclase.Location = new System.Drawing.Point(200, 20);
+            this.cmbclase.Name = "cmbclase";
+            this.cmbclase.Size = new System.Drawing.Size(133, 24);
+            this.cmbclase.TabIndex = 7;
+            this.cmbclase.Text = "Clase";
             // 
-            // comboBox2
+            // cmbdireccion
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbdireccion.FormattingEnabled = true;
+            this.cmbdireccion.Items.AddRange(new object[] {
             "Ida y Vuelta ",
             "Ida",
             "Vuelta"});
-            this.comboBox2.Location = new System.Drawing.Point(23, 20);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(133, 24);
-            this.comboBox2.TabIndex = 6;
-            this.comboBox2.Text = "Direccion";
+            this.cmbdireccion.Location = new System.Drawing.Point(23, 20);
+            this.cmbdireccion.Name = "cmbdireccion";
+            this.cmbdireccion.Size = new System.Drawing.Size(133, 24);
+            this.cmbdireccion.TabIndex = 6;
+            this.cmbdireccion.Text = "Direccion";
             // 
-            // comboBox1
+            // cmborigen
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(22, 59);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(181, 24);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.Text = "Origen";
+            this.cmborigen.FormattingEnabled = true;
+            this.cmborigen.Location = new System.Drawing.Point(22, 59);
+            this.cmborigen.Name = "cmborigen";
+            this.cmborigen.Size = new System.Drawing.Size(181, 24);
+            this.cmborigen.TabIndex = 5;
+            this.cmborigen.Text = "Origen";
             // 
             // label1
             // 
@@ -174,7 +179,7 @@
             // 
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(344, 382);
+            this.panel3.Location = new System.Drawing.Point(302, 382);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(634, 250);
             this.panel3.TabIndex = 2;
@@ -205,10 +210,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Sans Serif Collection", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(432, 45);
+            this.label3.Location = new System.Drawing.Point(540, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 16);
+            this.label3.Size = new System.Drawing.Size(323, 49);
             this.label3.TabIndex = 5;
             this.label3.Text = "CENTRO DE AYUDA";
             // 
@@ -226,6 +232,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Name = "frmreserva";
             this.Text = "frmreserva";
+            this.Load += new System.EventHandler(this.frmreserva_Load_1);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -240,16 +247,16 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnbuscar;
+        private System.Windows.Forms.ComboBox cmbdestino;
+        private System.Windows.Forms.ComboBox cmbpasajeros;
+        private System.Windows.Forms.ComboBox cmbclase;
+        private System.Windows.Forms.ComboBox cmbdireccion;
+        private System.Windows.Forms.ComboBox cmborigen;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpida;
+        private System.Windows.Forms.DateTimePicker dtpvuelta;
     }
 }

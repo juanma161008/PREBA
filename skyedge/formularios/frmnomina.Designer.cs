@@ -352,7 +352,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1036, 622);
+            this.ClientSize = new System.Drawing.Size(1102, 668);
             this.Controls.Add(this.txthoras);
             this.Controls.Add(this.txtsalariobasico);
             this.Controls.Add(this.txtnombre);
