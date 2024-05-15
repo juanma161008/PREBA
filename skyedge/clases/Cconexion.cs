@@ -10,13 +10,13 @@ namespace skyedge.clases
 {
     class Cconexion
     {
-        //Se define la ruta de la base de datos
-        static private string CadenaConexion = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\candr\source\repos\skyedge1\skyedge\dbskyedge.mdf;Integrated Security=True;Connect Timeout=30";
+        // Se define la ruta de la base de datos
+        public static string CadenaConexion = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\JUAN MANUEL CARDENAS\OneDrive\Documentos\POB\skyedge\skyedge\dbskyedge.mdf;Integrated Security=True;Connect Timeout=30";
 
-        //Definir una variable para cargar la base de datos
+        // Definir una variable para cargar la base de datos
         private SqlConnection Conexion = new SqlConnection(CadenaConexion);
 
-        //metodo para abrir la base de datos
+        // Método para abrir la base de datos
         public SqlConnection AbrirConexion()
         {
             if (Conexion.State == ConnectionState.Closed)
@@ -24,14 +24,12 @@ namespace skyedge.clases
             return Conexion;
         }
 
-
-
-        //método para cerrar la base de datos
-        public SqlConnection CerrarConexion()
+        // Método para cerrar la base de datos
+        public void CerrarConexion()
         {
             if (Conexion.State == ConnectionState.Open)
                 Conexion.Close();
-            return Conexion;
         }
     }
 }
+

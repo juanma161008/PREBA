@@ -27,7 +27,7 @@ namespace skyedge.formularios
 
             cn = new Cconexion();
             i = 0; boton = 0;
-            cmd = new SqlCommand("select * from tblusuario", cn.AbrirConexion());
+            cmd = new SqlCommand("select * from tblUsuario", cn.AbrirConexion());
             da = new SqlDataAdapter(cmd);
             dt = new DataTable();
             da.Fill(dt);

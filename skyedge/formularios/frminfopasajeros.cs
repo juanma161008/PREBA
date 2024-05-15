@@ -17,7 +17,7 @@ namespace skyedge.formularios
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void dgvinfopasajeros_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

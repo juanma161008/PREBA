@@ -27,6 +27,11 @@ namespace skyedge.formularios
 
         }
 
+        private void frmusuarionuevo_Load(object sender, EventArgs e)
+        {
+
+        }
+
         public frmusuarionuevo()
         {
             InitializeComponent();
