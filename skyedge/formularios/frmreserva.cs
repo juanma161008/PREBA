@@ -99,6 +99,11 @@ namespace skyedge.formularios
                 MessageBox.Show("Error al cargar destinos y orígenes: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }
