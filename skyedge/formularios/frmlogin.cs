@@ -63,11 +63,9 @@ namespace skyedge.formularios
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            // Extract email domain
             string email = txtemail.Text.Trim();
             string domain = email.Split('@')[1];
 
-            // Validate email and password against the database
             cn = new Cconexion();
             cmd = new SqlCommand("SELECT * FROM tblUsuario WHERE email = @email AND contrasena = @password", cn.AbrirConexion());
             cmd.Parameters.AddWithValue("@email", email);
@@ -78,13 +76,11 @@ namespace skyedge.formularios
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                // Check if login credentials are valid (assuming dt.Rows.Count > 0 indicates valid credentials)
+                
                 if (dt.Rows.Count > 0)
                 {
-                    // Check domain conditions
                     if (domain.Equals("skyedgecompany.com"))
                     {
-                        // Redirect to frmnomina for skyedgecompany.com domain
                         frmnomina nominaForm = new frmnomina();
                         timer1.Stop();
                         nominaForm.Show();
@@ -92,7 +88,6 @@ namespace skyedge.formularios
                     }
                     else if (domain.Equals("adminskyedgecompany.com"))
                     {
-                        // Redirect to frmmenu for adminskyedgecompany.com domain
                         frmmenu menuForm = new frmmenu();
                         timer1.Stop();
                         menuForm.Show();
@@ -100,7 +95,6 @@ namespace skyedge.formularios
                     }
                     else
                     {
-                        // Redirect to frmreserva for other domains
                         frmreserva reservaForm = new frmreserva();
                         timer1.Stop();
                         reservaForm.Show();
@@ -109,7 +103,6 @@ namespace skyedge.formularios
                 }
                 else
                 {
-                    // Invalid credentials - Increase counter and display message
                     contador++;
 
                     txtemail.Focus();
@@ -122,9 +115,9 @@ namespace skyedge.formularios
                     {
                         MessageBox.Show("Fallaste!!!");
 
-                        // Update user status to inactive (replace with your logic)
+                    
                         cmd.CommandText = "UPDATE tblusuario SET estado = @est WHERE email = @email";
-                        cmd.Parameters.AddWithValue("@est", false); // Assuming false indicates inactive
+                        cmd.Parameters.AddWithValue("@est", false); 
                         cmd.ExecuteNonQuery();
 
                         this.Close();
@@ -132,7 +125,6 @@ namespace skyedge.formularios
                 }
             }
 
-            // Clear text boxes after processing
             txtpassword.Clear();
             txtemail.Clear();
         }
