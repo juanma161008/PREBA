@@ -17,12 +17,32 @@ namespace skyedge.formularios
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnguardar_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void btnconsulta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnmodificacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnretiro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtreserva_Leave(object sender, EventArgs e)
         {
 
         }
