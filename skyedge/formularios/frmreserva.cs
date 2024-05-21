@@ -1,15 +1,8 @@
 ﻿using skyedge.clases;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace skyedge.formularios
 {
@@ -28,7 +21,6 @@ namespace skyedge.formularios
 
         private void frmreserva_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnbuscar_Click(object sender, EventArgs e)
@@ -41,14 +33,14 @@ namespace skyedge.formularios
             }
 
             // Obtener la información seleccionada
-            string direccionParam = cmbdireccion.SelectedItem.ToString();
-            string origenParam = cmborigen.SelectedItem.ToString();
-            string destinoParam = cmbdestino.SelectedItem.ToString();
+            string direccion = cmbdireccion.SelectedItem.ToString();
+            string origen = cmborigen.SelectedItem.ToString();
+            string destino = cmbdestino.SelectedItem.ToString();
             DateTime fechaSalida = dtpida.Value;
             DateTime? fechaRegreso = null;
 
             // Si es vuelta o ida y vuelta, obtener la fecha de regreso
-            if (direccionParam == "Vuelta" || direccionParam == "Ida y Vuelta")
+            if (direccion == "Vuelta" || direccion == "Ida y Vuelta")
             {
                 if (dtpvuelta.Value == null)
                 {
@@ -59,17 +51,14 @@ namespace skyedge.formularios
             }
 
             // Crear la instancia del formulario de vuelos disponibles y pasar la información
-            frmvuelosdisponibles vuelosDisponiblesForm = new frmvuelosdisponibles(direccionParam, origenParam, destinoParam);
+            frmvuelosdisponibles vuelosDisponiblesForm = new frmvuelosdisponibles(direccion, origen, destino, fechaSalida, fechaRegreso);
             vuelosDisponiblesForm.Show();
 
             // Ocultar el formulario actual
             this.Hide();
         }
+    
 
-        private void frmreserva_Load_1(object sender, EventArgs e)
-        {
-
-        }
         private void CargarDestinosYOrigenes()
         {
             try
@@ -99,11 +88,5 @@ namespace skyedge.formularios
                 MessageBox.Show("Error al cargar destinos y orígenes: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
-
 }

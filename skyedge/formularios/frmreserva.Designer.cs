@@ -59,7 +59,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1236, 259);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+
             // 
             // btnbuscar
             // 
@@ -232,7 +232,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Name = "frmreserva";
             this.Text = "frmreserva";
-            this.Load += new System.EventHandler(this.frmreserva_Load_1);
+
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);

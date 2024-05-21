@@ -46,3 +46,4 @@ C:\Users\JUAN MANUEL CARDENAS\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.cs
 C:\Users\JUAN MANUEL CARDENAS\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.exe
 C:\Users\JUAN MANUEL CARDENAS\Source\Repos\skyedge1\skyedge\obj\Debug\skyedge.pdb
 C:\Users\JUAN MANUEL CARDENAS\source\repos\skyedge1\skyedge\obj\Debug\skyedge.formularios.frminfopasajeros.resources
+C:\Users\JUAN MANUEL CARDENAS\source\repos\skyedge1\skyedge\obj\Debug\skyedge.formularios.frmmenu.resources

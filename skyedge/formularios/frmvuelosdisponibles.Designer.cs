@@ -30,6 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmvuelosdisponibles));
             this.dgvida = new System.Windows.Forms.DataGridView();
+            this.Elegir = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Origen_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Destino_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hora_salida_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hora_llegada_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvvuelta = new System.Windows.Forms.DataGridView();
@@ -41,13 +48,6 @@
             this.hora_llegada_vuelta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio_vuelta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
-            this.Elegir = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Origen_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Destino_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hora_salida_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hora_llegada_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvvuelta)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,55 @@
             this.dgvida.RowTemplate.Height = 24;
             this.dgvida.Size = new System.Drawing.Size(923, 166);
             this.dgvida.TabIndex = 0;
+            // 
+            // Elegir
+            // 
+            this.Elegir.HeaderText = "Elegir";
+            this.Elegir.MinimumWidth = 6;
+            this.Elegir.Name = "Elegir";
+            this.Elegir.Width = 125;
+            // 
+            // Origen_ida
+            // 
+            this.Origen_ida.HeaderText = "Origen";
+            this.Origen_ida.MinimumWidth = 6;
+            this.Origen_ida.Name = "Origen_ida";
+            this.Origen_ida.Width = 125;
+            // 
+            // Destino_ida
+            // 
+            this.Destino_ida.HeaderText = "Destino";
+            this.Destino_ida.MinimumWidth = 6;
+            this.Destino_ida.Name = "Destino_ida";
+            this.Destino_ida.Width = 125;
+            // 
+            // fecha_ida
+            // 
+            this.fecha_ida.HeaderText = "fecha";
+            this.fecha_ida.MinimumWidth = 6;
+            this.fecha_ida.Name = "fecha_ida";
+            this.fecha_ida.Width = 125;
+            // 
+            // hora_salida_ida
+            // 
+            this.hora_salida_ida.HeaderText = "Hora salida";
+            this.hora_salida_ida.MinimumWidth = 6;
+            this.hora_salida_ida.Name = "hora_salida_ida";
+            this.hora_salida_ida.Width = 125;
+            // 
+            // hora_llegada_ida
+            // 
+            this.hora_llegada_ida.HeaderText = "Hora llegada";
+            this.hora_llegada_ida.MinimumWidth = 6;
+            this.hora_llegada_ida.Name = "hora_llegada_ida";
+            this.hora_llegada_ida.Width = 125;
+            // 
+            // precio_ida
+            // 
+            this.precio_ida.HeaderText = "Precio";
+            this.precio_ida.MinimumWidth = 6;
+            this.precio_ida.Name = "precio_ida";
+            this.precio_ida.Width = 125;
             // 
             // label1
             // 
@@ -175,55 +224,6 @@
             this.button1.Text = " CONTINUAR";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // Elegir
-            // 
-            this.Elegir.HeaderText = "Elegir";
-            this.Elegir.MinimumWidth = 6;
-            this.Elegir.Name = "Elegir";
-            this.Elegir.Width = 125;
-            // 
-            // Origen_ida
-            // 
-            this.Origen_ida.HeaderText = "Origen";
-            this.Origen_ida.MinimumWidth = 6;
-            this.Origen_ida.Name = "Origen_ida";
-            this.Origen_ida.Width = 125;
-            // 
-            // Destino_ida
-            // 
-            this.Destino_ida.HeaderText = "Destino";
-            this.Destino_ida.MinimumWidth = 6;
-            this.Destino_ida.Name = "Destino_ida";
-            this.Destino_ida.Width = 125;
-            // 
-            // fecha_ida
-            // 
-            this.fecha_ida.HeaderText = "fecha";
-            this.fecha_ida.MinimumWidth = 6;
-            this.fecha_ida.Name = "fecha_ida";
-            this.fecha_ida.Width = 125;
-            // 
-            // hora_salida_ida
-            // 
-            this.hora_salida_ida.HeaderText = "Hora salida";
-            this.hora_salida_ida.MinimumWidth = 6;
-            this.hora_salida_ida.Name = "hora_salida_ida";
-            this.hora_salida_ida.Width = 125;
-            // 
-            // hora_llegada_ida
-            // 
-            this.hora_llegada_ida.HeaderText = "Hora llegada";
-            this.hora_llegada_ida.MinimumWidth = 6;
-            this.hora_llegada_ida.Name = "hora_llegada_ida";
-            this.hora_llegada_ida.Width = 125;
-            // 
-            // precio_ida
-            // 
-            this.precio_ida.HeaderText = "Precio";
-            this.precio_ida.MinimumWidth = 6;
-            this.precio_ida.Name = "precio_ida";
-            this.precio_ida.Width = 125;
-            // 
             // frmvuelosdisponibles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -237,7 +237,7 @@
             this.Controls.Add(this.dgvida);
             this.Name = "frmvuelosdisponibles";
             this.Text = "frmvuelosdisponibles";
-            this.Load += new System.EventHandler(this.frmvuelosdisponibles_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.dgvida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvvuelta)).EndInit();
             this.ResumeLayout(false);

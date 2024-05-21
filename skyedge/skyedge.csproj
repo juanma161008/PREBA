@@ -115,6 +115,9 @@
     <EmbeddedResource Include="formularios\frminfopasajeros.resx">
       <DependentUpon>frminfopasajeros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmmenu.resx">
+      <DependentUpon>frmmenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmmodificareserva.resx">
       <DependentUpon>frmmodificareserva.cs</DependentUpon>
     </EmbeddedResource>
