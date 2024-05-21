@@ -1,0 +1,28 @@
+﻿INSERT INTO [dbo].[tblvuelos] 
+    (origen_ida, destino_ida, fecha_ida, hora_salida_ida, hora_llegada_ida, precio_ida, empleado_ida, tipo_aeronave_ida, origen_vuelta, destino_vuelta, fecha_vuelta, hora_salida_vuelta, hora_llegada_vuelta, precio_vuelta, empleado_vuelta, tipo_aeronave_vuelta)
+VALUES 
+    ('Bogotá', 'Medellín', '2024-06-01', '08:00:00', '09:00:00', 100.00, 'Carlos Perez', 'Boeing 737', 'Medellín', 'Bogotá', '2024-06-02', '10:00:00', '11:00:00', 90.00, 'Ana Torres', 'Boeing 737'),
+    ('Bogotá', 'Cali', '2024-06-02', '09:00:00', '10:30:00', 120.00, 'Luis Gómez', 'Airbus A320', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Medellín', 'Cartagena', '2024-06-03', '07:00:00', '08:30:00', 150.00, 'Maria Lopez', 'Boeing 737', 'Cartagena', 'Medellín', '2024-06-04', '09:00:00', '10:30:00', 140.00, 'Carlos Perez', 'Boeing 737'),
+    ('Cali', 'Barranquilla', '2024-06-04', '10:00:00', '11:30:00', 130.00, 'Juan Martinez', 'Embraer 190', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Bogotá', 'Cartagena', '2024-06-05', '06:00:00', '07:30:00', 110.00, 'Sofia Rodriguez', 'Boeing 737', 'Cartagena', 'Bogotá', '2024-06-06', '08:00:00', '09:30:00', 100.00, 'Luis Gomez', 'Boeing 737'),
+    ('Barranquilla', 'Medellín', '2024-06-06', '08:00:00', '09:00:00', 140.00, 'Pedro Sanchez', 'Boeing 737', 'Medellín', 'Barranquilla', '2024-06-07', '10:00:00', '11:00:00', 130.00, 'Ana Torres', 'Boeing 737'),
+    ('Cartagena', 'Cali', '2024-06-07', '09:00:00', '10:30:00', 160.00, 'Jose Diaz', 'Airbus A320', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Medellín', 'Bogotá', '2024-06-08', '07:00:00', '08:00:00', 100.00, 'Daniela Fernandez', 'Boeing 737', 'Bogotá', 'Medellín', '2024-06-09', '09:00:00', '10:00:00', 90.00, 'Carlos Perez', 'Boeing 737'),
+    ('Cali', 'Medellín', '2024-06-09', '10:00:00', '11:30:00', 120.00, 'Andrea Romero', 'Embraer 190', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Bogotá', 'Barranquilla', '2024-06-10', '06:00:00', '07:30:00', 110.00, 'Victor Hernandez', 'Airbus A320', 'Barranquilla', 'Bogotá', '2024-06-11', '08:00:00', '09:30:00', 100.00, 'Sofia Rodriguez', 'Airbus A320'),
+    ('Medellín', 'Cali', '2024-06-11', '07:00:00', '08:30:00', 150.00, 'Laura Ruiz', 'Boeing 737', 'Cali', 'Medellín', '2024-06-12', '09:00:00', '10:30:00', 140.00, 'Juan Martinez', 'Boeing 737'),
+    ('Cartagena', 'Bogotá', '2024-06-12', '08:00:00', '09:30:00', 130.00, 'Marta Garcia', 'Boeing 737', 'Bogotá', 'Cartagena', '2024-06-13', '10:00:00', '11:30:00', 120.00, 'Pedro Sanchez', 'Boeing 737'),
+    ('Cali', 'Cartagena', '2024-06-13', '09:00:00', '10:30:00', 160.00, 'David Herrera', 'Embraer 190', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Bogotá', 'Medellín', '2024-06-14', '08:00:00', '09:00:00', 100.00, 'Gloria Paredes', 'Boeing 737', 'Medellín', 'Bogotá', '2024-06-15', '10:00:00', '11:00:00', 90.00, 'Daniela Fernandez', 'Boeing 737'),
+    ('Cali', 'Barranquilla', '2024-06-15', '10:00:00', '11:30:00', 120.00, 'Paula Torres', 'Airbus A320', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Bogotá', 'Cartagena', '2024-06-16', '06:00:00', '07:30:00', 110.00, 'Alfredo Garcia', 'Boeing 737', 'Cartagena', 'Bogotá', '2024-06-17', '08:00:00', '09:30:00', 100.00, 'Laura Ruiz', 'Boeing 737'),
+    ('Barranquilla', 'Medellín', '2024-06-17', '08:00:00', '09:00:00', 140.00, 'Esteban Ruiz', 'Boeing 737', 'Medellín', 'Barranquilla', '2024-06-18', '10:00:00', '11:00:00', 130.00, 'Victor Hernandez', 'Boeing 737'),
+    ('Cartagena', 'Cali', '2024-06-18', '09:00:00', '10:30:00', 160.00, 'Rosa Moreno', 'Airbus A320', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Medellín', 'Bogotá', '2024-06-19', '07:00:00', '08:00:00', 100.00, 'Julian Gomez', 'Boeing 737', 'Bogotá', 'Medellín', '2024-06-20', '09:00:00', '10:00:00', 90.00, 'Gloria Paredes', 'Boeing 737'),
+    ('Cali', 'Medellín', '2024-06-20', '10:00:00', '11:30:00', 120.00, 'Carolina Fernandez', 'Embraer 190', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Bogotá', 'Barranquilla', '2024-06-21', '06:00:00', '07:30:00', 110.00, 'Fernando Ramirez', 'Airbus A320', 'Barranquilla', 'Bogotá', '2024-06-22', '08:00:00', '09:30:00', 100.00, 'Paula Torres', 'Airbus A320'),
+    ('Medellín', 'Cali', '2024-06-22', '07:00:00', '08:30:00', 150.00, 'Gabriela Ruiz', 'Boeing 737', 'Cali', 'Medellín', '2024-06-23', '09:00:00', '10:30:00', 140.00, 'Alfredo Garcia', 'Boeing 737'),
+    ('Cartagena', 'Bogotá', '2024-06-23', '08:00:00', '09:30:00', 130.00, 'Natalia Torres', 'Boeing 737', 'Bogotá', 'Cartagena', '2024-06-24', '10:00:00', '11:30:00', 120.00, 'Esteban Ruiz', 'Boeing 737'),
+    ('Cali', 'Cartagena', '2024-06-24', '09:00:00', '10:30:00', 160.00, 'Adriana Gomez', 'Embraer 190', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Bogotá', 'Medellín', '2024-06-25', '08:00:00', '09:00:00', 100.00, 'Javier Martinez', 'Boeing 737', 'Medellín', 'Bogotá', '2024-06-26', '10:00:00', '11:00:00', 90.00, 'Rosa Moreno', 'Boeing 737');
