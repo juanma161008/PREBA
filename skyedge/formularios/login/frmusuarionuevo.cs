@@ -45,8 +45,8 @@ namespace skyedge.formularios
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("insert into tblUsuario values('" + txtCedula.Text + "','" + txtnombre.Text + "','" + txtapellidos.Text + "','" + txttelefono.Text + "','"+ txtemail.Text + "','"+txtpassword.Text + "', 1)", cn.AbrirConexion());
-            cmd.ExecuteNonQuery();
+                cmd = new SqlCommand("insert into tblUsuario values('" + txtCedula.Text + "','" + txtnombre.Text + "','" + txtapellidos.Text + "','" + txttelefono.Text + "','"+ txtemail.Text + "','"+txtpassword.Text + "', 1)", cn.AbrirConexion());
+                cmd.ExecuteNonQuery();
             MessageBox.Show("empleado guardado");
 
             this.Close();
