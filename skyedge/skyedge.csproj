@@ -53,6 +53,12 @@
     <Compile Include="formularios\admin\frmempleado.Designer.cs">
       <DependentUpon>frmempleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\empleados\frmconsultaliquidacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\empleados\frmconsultaliquidacion.Designer.cs">
+      <DependentUpon>frmconsultaliquidacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\empleados\frmnominaempleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="formularios\admin\frmempleado.resx">
       <DependentUpon>frmempleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\empleados\frmconsultaliquidacion.resx">
+      <DependentUpon>frmconsultaliquidacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\empleados\frmnominaempleado.resx">
       <DependentUpon>frmnominaempleado.cs</DependentUpon>
