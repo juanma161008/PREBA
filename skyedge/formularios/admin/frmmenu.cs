@@ -87,7 +87,7 @@ namespace skyedge.formularios
 
         private void btnvuelo_Click(object sender, EventArgs e)
         {
-            abrirpanel(new frmvuelo());
+            abrirpanel(new frmvuelosida());
             ocultarsubmenu();
         }
 

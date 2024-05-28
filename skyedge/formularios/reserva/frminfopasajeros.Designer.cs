@@ -40,6 +40,7 @@
             // 
             // dgvinfopasajeros
             // 
+            this.dgvinfopasajeros.BackgroundColor = System.Drawing.Color.Indigo;
             this.dgvinfopasajeros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvinfopasajeros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre,
@@ -48,6 +49,7 @@
             this.cedula,
             this.fechaN,
             this.telefono});
+            this.dgvinfopasajeros.GridColor = System.Drawing.Color.Indigo;
             this.dgvinfopasajeros.Location = new System.Drawing.Point(19, 18);
             this.dgvinfopasajeros.Name = "dgvinfopasajeros";
             this.dgvinfopasajeros.RowHeadersWidth = 51;

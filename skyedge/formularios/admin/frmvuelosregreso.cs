@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace skyedge.formularios
+namespace skyedge.formularios.admin
 {
-    public partial class frmvuelo : Form
+    public partial class frmvuelosregreso : Form
     {
-        public frmvuelo()
+        public frmvuelosregreso()
         {
             InitializeComponent();
         }
