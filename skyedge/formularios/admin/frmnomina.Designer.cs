@@ -367,18 +367,18 @@
             // 
             this.comboBoxFecha.FormattingEnabled = true;
             this.comboBoxFecha.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"});
             this.comboBoxFecha.Location = new System.Drawing.Point(251, 170);
             this.comboBoxFecha.Name = "comboBoxFecha";
             this.comboBoxFecha.Size = new System.Drawing.Size(229, 21);
