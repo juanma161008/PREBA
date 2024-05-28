@@ -47,11 +47,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clases\Cconexion.cs" />
-    <Compile Include="formularios\empleado\frmempleado.cs">
+    <Compile Include="formularios\admin\frmempleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\empleado\frmempleado.Designer.cs">
+    <Compile Include="formularios\admin\frmempleado.Designer.cs">
       <DependentUpon>frmempleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\empleados\frmnominaempleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\empleados\frmnominaempleado.Designer.cs">
+      <DependentUpon>frmnominaempleado.cs</DependentUpon>
     </Compile>
     <Compile Include="formularios\reserva\frminfopasajeros.cs">
       <SubType>Form</SubType>
@@ -59,22 +65,22 @@
     <Compile Include="formularios\reserva\frminfopasajeros.Designer.cs">
       <DependentUpon>frminfopasajeros.cs</DependentUpon>
     </Compile>
-    <Compile Include="formularios\empleado\frmmenu.cs">
+    <Compile Include="formularios\admin\frmmenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\empleado\frmmenu.Designer.cs">
+    <Compile Include="formularios\admin\frmmenu.Designer.cs">
       <DependentUpon>frmmenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="formularios\empleado\frmmodificareserva.cs">
+    <Compile Include="formularios\admin\frmmodificareserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\empleado\frmmodificareserva.Designer.cs">
+    <Compile Include="formularios\admin\frmmodificareserva.Designer.cs">
       <DependentUpon>frmmodificareserva.cs</DependentUpon>
     </Compile>
-    <Compile Include="formularios\empleado\frmnomina.cs">
+    <Compile Include="formularios\admin\frmnomina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\empleado\frmnomina.Designer.cs">
+    <Compile Include="formularios\admin\frmnomina.Designer.cs">
       <DependentUpon>frmnomina.cs</DependentUpon>
     </Compile>
     <Compile Include="formularios\reserva\frmreserva.cs">
@@ -95,10 +101,10 @@
     <Compile Include="formularios\login\frmlogin.Designer.cs">
       <DependentUpon>frmlogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="formularios\empleado\frmvuelo.cs">
+    <Compile Include="formularios\admin\frmvuelo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\empleado\frmvuelo.Designer.cs">
+    <Compile Include="formularios\admin\frmvuelo.Designer.cs">
       <DependentUpon>frmvuelo.cs</DependentUpon>
     </Compile>
     <Compile Include="formularios\reserva\frmvuelosdisponibles.cs">
@@ -109,19 +115,22 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="formularios\empleado\frmempleado.resx">
+    <EmbeddedResource Include="formularios\admin\frmempleado.resx">
       <DependentUpon>frmempleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\empleados\frmnominaempleado.resx">
+      <DependentUpon>frmnominaempleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\reserva\frminfopasajeros.resx">
       <DependentUpon>frminfopasajeros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\empleado\frmmenu.resx">
+    <EmbeddedResource Include="formularios\admin\frmmenu.resx">
       <DependentUpon>frmmenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\empleado\frmmodificareserva.resx">
+    <EmbeddedResource Include="formularios\admin\frmmodificareserva.resx">
       <DependentUpon>frmmodificareserva.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\empleado\frmnomina.resx">
+    <EmbeddedResource Include="formularios\admin\frmnomina.resx">
       <DependentUpon>frmnomina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\reserva\frmreserva.resx">
@@ -134,7 +143,7 @@
     <EmbeddedResource Include="formularios\login\frmlogin.resx">
       <DependentUpon>frmlogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\empleado\frmvuelo.resx">
+    <EmbeddedResource Include="formularios\admin\frmvuelo.resx">
       <DependentUpon>frmvuelo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\reserva\frmvuelosdisponibles.resx">
