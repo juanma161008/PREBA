@@ -29,3 +29,6 @@
 /skyedge/obj/Debug/skyedge.formularios.frmlogin.resources
 *.json
 /skyedge/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/skyedge/obj/Debug/skyedge.csproj.CoreCompileInputs.cache
+/skyedge/obj/Debug/skyedge.csproj.FileListAbsolute.txt
+/skyedge/obj/Debug/skyedge.formularios.empleados.frmnominaempleado.resources
