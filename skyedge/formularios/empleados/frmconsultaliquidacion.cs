@@ -21,5 +21,10 @@ namespace skyedge.formularios.empleados
         {
 
         }
+
+        private void frmconsultaliquidacion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
