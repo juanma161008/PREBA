@@ -58,6 +58,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.Fecha = new System.Windows.Forms.Label();
+            this.comboBoxFecha = new System.Windows.Forms.ComboBox();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -65,74 +67,77 @@
             // 
             // txthoras
             // 
-            this.txthoras.Location = new System.Drawing.Point(323, 346);
+            this.txthoras.Location = new System.Drawing.Point(323, 407);
             this.txthoras.Name = "txthoras";
-            this.txthoras.Size = new System.Drawing.Size(211, 22);
+            this.txthoras.Size = new System.Drawing.Size(211, 20);
             this.txthoras.TabIndex = 28;
             // 
             // txtsalariobasico
             // 
-            this.txtsalariobasico.Location = new System.Drawing.Point(334, 292);
+            this.txtsalariobasico.Location = new System.Drawing.Point(334, 353);
             this.txtsalariobasico.Name = "txtsalariobasico";
-            this.txtsalariobasico.Size = new System.Drawing.Size(193, 22);
+            this.txtsalariobasico.Size = new System.Drawing.Size(193, 20);
             this.txtsalariobasico.TabIndex = 27;
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(261, 230);
+            this.txtnombre.Enabled = false;
+            this.txtnombre.Location = new System.Drawing.Point(261, 291);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(231, 22);
+            this.txtnombre.Size = new System.Drawing.Size(231, 20);
             this.txtnombre.TabIndex = 26;
             // 
             // txtcedula
             // 
-            this.txtcedula.Location = new System.Drawing.Point(261, 168);
+            this.txtcedula.Location = new System.Drawing.Point(261, 229);
             this.txtcedula.Name = "txtcedula";
-            this.txtcedula.Size = new System.Drawing.Size(220, 22);
+            this.txtcedula.Size = new System.Drawing.Size(220, 20);
             this.txtcedula.TabIndex = 25;
+            this.txtcedula.Leave += new System.EventHandler(this.txtcedula_Leave_1);
             // 
             // btnguardar
             // 
             this.btnguardar.BackColor = System.Drawing.Color.DarkRed;
             this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardar.ForeColor = System.Drawing.Color.White;
-            this.btnguardar.Location = new System.Drawing.Point(205, 391);
+            this.btnguardar.Location = new System.Drawing.Point(204, 459);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(243, 49);
             this.btnguardar.TabIndex = 24;
             this.btnguardar.Text = "Calcular y Guardar";
             this.btnguardar.UseVisualStyleBackColor = false;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Cornsilk;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(119, 346);
+            this.label6.Location = new System.Drawing.Point(119, 407);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(173, 25);
+            this.label6.Size = new System.Drawing.Size(151, 20);
             this.label6.TabIndex = 23;
-            this.label6.Text = "horas trabajadas";
+            this.label6.Text = "Horas Trabajadas";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Cornsilk;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(119, 288);
+            this.label5.Location = new System.Drawing.Point(119, 349);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(194, 25);
+            this.label5.Size = new System.Drawing.Size(168, 20);
             this.label5.TabIndex = 22;
-            this.label5.Text = "salario basico hora";
+            this.label5.Text = "Salario Basico Hora";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Cornsilk;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(119, 226);
+            this.label4.Location = new System.Drawing.Point(119, 287);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 25);
+            this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 21;
             this.label4.Text = "Nombre";
             // 
@@ -141,11 +146,11 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Cornsilk;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(119, 164);
+            this.label3.Location = new System.Drawing.Point(119, 225);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 25);
+            this.label3.Size = new System.Drawing.Size(70, 20);
             this.label3.TabIndex = 20;
-            this.label3.Text = " cedula";
+            this.label3.Text = " Cedula";
             // 
             // panel4
             // 
@@ -161,7 +166,7 @@
             // 
             this.txtdevengado.Location = new System.Drawing.Point(75, 79);
             this.txtdevengado.Name = "txtdevengado";
-            this.txtdevengado.Size = new System.Drawing.Size(271, 22);
+            this.txtdevengado.Size = new System.Drawing.Size(271, 20);
             this.txtdevengado.TabIndex = 19;
             // 
             // label14
@@ -172,9 +177,9 @@
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(112, 15);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(174, 25);
+            this.label14.Size = new System.Drawing.Size(145, 20);
             this.label14.TabIndex = 18;
-            this.label14.Text = "Total devengado";
+            this.label14.Text = "Total Devengado";
             // 
             // panel3
             // 
@@ -196,28 +201,28 @@
             // 
             this.txtvalorextras.Location = new System.Drawing.Point(175, 130);
             this.txtvalorextras.Name = "txtvalorextras";
-            this.txtvalorextras.Size = new System.Drawing.Size(200, 22);
+            this.txtvalorextras.Size = new System.Drawing.Size(200, 20);
             this.txtvalorextras.TabIndex = 21;
             // 
             // txthorasextras
             // 
             this.txthorasextras.Location = new System.Drawing.Point(185, 90);
             this.txthorasextras.Name = "txthorasextras";
-            this.txthorasextras.Size = new System.Drawing.Size(190, 22);
+            this.txthorasextras.Size = new System.Drawing.Size(190, 20);
             this.txthorasextras.TabIndex = 20;
             // 
             // txtauxiliodetransporte
             // 
             this.txtauxiliodetransporte.Location = new System.Drawing.Point(230, 53);
             this.txtauxiliodetransporte.Name = "txtauxiliodetransporte";
-            this.txtauxiliodetransporte.Size = new System.Drawing.Size(146, 22);
+            this.txtauxiliodetransporte.Size = new System.Drawing.Size(146, 20);
             this.txtauxiliodetransporte.TabIndex = 19;
             // 
             // txtsalariobruto
             // 
             this.txtsalariobruto.Location = new System.Drawing.Point(190, 16);
             this.txtsalariobruto.Name = "txtsalariobruto";
-            this.txtsalariobruto.Size = new System.Drawing.Size(187, 22);
+            this.txtsalariobruto.Size = new System.Drawing.Size(187, 20);
             this.txtsalariobruto.TabIndex = 18;
             // 
             // label13
@@ -228,9 +233,9 @@
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(15, 126);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(130, 25);
+            this.label13.Size = new System.Drawing.Size(112, 20);
             this.label13.TabIndex = 17;
-            this.label13.Text = " valor extras";
+            this.label13.Text = " Valor Extras";
             // 
             // label12
             // 
@@ -240,9 +245,9 @@
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(8, 87);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(137, 25);
+            this.label12.Size = new System.Drawing.Size(118, 20);
             this.label12.TabIndex = 16;
-            this.label12.Text = " horas extras";
+            this.label12.Text = " Horas Extras";
             // 
             // label11
             // 
@@ -252,9 +257,9 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(17, 51);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(207, 25);
+            this.label11.Size = new System.Drawing.Size(178, 20);
             this.label11.TabIndex = 15;
-            this.label11.Text = "auxilio de transporte";
+            this.label11.Text = "Auxilio de Transporte";
             // 
             // label10
             // 
@@ -264,16 +269,16 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(17, 12);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(135, 25);
+            this.label10.Size = new System.Drawing.Size(114, 20);
             this.label10.TabIndex = 14;
-            this.label10.Text = "Salario bruto";
+            this.label10.Text = "Salario Bruto";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Maroon;
             this.panel2.Location = new System.Drawing.Point(572, 143);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(21, 513);
+            this.panel2.Size = new System.Drawing.Size(21, 555);
             this.panel2.TabIndex = 17;
             // 
             // panel1
@@ -285,7 +290,7 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(124, 460);
+            this.panel1.Location = new System.Drawing.Point(123, 528);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(403, 170);
             this.panel1.TabIndex = 16;
@@ -294,21 +299,21 @@
             // 
             this.txtretefuente.Location = new System.Drawing.Point(199, 114);
             this.txtretefuente.Name = "txtretefuente";
-            this.txtretefuente.Size = new System.Drawing.Size(169, 22);
+            this.txtretefuente.Size = new System.Drawing.Size(169, 20);
             this.txtretefuente.TabIndex = 16;
             // 
             // txtpension
             // 
             this.txtpension.Location = new System.Drawing.Point(165, 59);
             this.txtpension.Name = "txtpension";
-            this.txtpension.Size = new System.Drawing.Size(192, 22);
+            this.txtpension.Size = new System.Drawing.Size(192, 20);
             this.txtpension.TabIndex = 15;
             // 
             // txtsalud
             // 
             this.txtsalud.Location = new System.Drawing.Point(148, 18);
             this.txtsalud.Name = "txtsalud";
-            this.txtsalud.Size = new System.Drawing.Size(210, 22);
+            this.txtsalud.Size = new System.Drawing.Size(210, 20);
             this.txtsalud.TabIndex = 14;
             // 
             // label9
@@ -319,9 +324,9 @@
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(14, 113);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(164, 25);
+            this.label9.Size = new System.Drawing.Size(145, 20);
             this.label9.TabIndex = 13;
-            this.label9.Text = " retefuente 10%";
+            this.label9.Text = " Retefuente 10%";
             // 
             // label8
             // 
@@ -331,9 +336,9 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(14, 61);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 25);
+            this.label8.Size = new System.Drawing.Size(103, 20);
             this.label8.TabIndex = 12;
-            this.label8.Text = "pension 4%";
+            this.label8.Text = "Pension 4%";
             // 
             // label7
             // 
@@ -343,15 +348,49 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(14, 16);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 25);
+            this.label7.Size = new System.Drawing.Size(85, 20);
             this.label7.TabIndex = 11;
-            this.label7.Text = "salud 4%";
+            this.label7.Text = "Salud 4%";
+            // 
+            // Fecha
+            // 
+            this.Fecha.AutoSize = true;
+            this.Fecha.BackColor = System.Drawing.Color.Cornsilk;
+            this.Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fecha.Location = new System.Drawing.Point(120, 167);
+            this.Fecha.Name = "Fecha";
+            this.Fecha.Size = new System.Drawing.Size(59, 20);
+            this.Fecha.TabIndex = 29;
+            this.Fecha.Text = "Fecha";
+            // 
+            // comboBoxFecha
+            // 
+            this.comboBoxFecha.FormattingEnabled = true;
+            this.comboBoxFecha.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.comboBoxFecha.Location = new System.Drawing.Point(251, 170);
+            this.comboBoxFecha.Name = "comboBoxFecha";
+            this.comboBoxFecha.Size = new System.Drawing.Size(229, 21);
+            this.comboBoxFecha.TabIndex = 30;
             // 
             // frmnomina
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1102, 668);
+            this.ClientSize = new System.Drawing.Size(1102, 711);
+            this.Controls.Add(this.comboBoxFecha);
+            this.Controls.Add(this.Fecha);
             this.Controls.Add(this.txthoras);
             this.Controls.Add(this.txtsalariobasico);
             this.Controls.Add(this.txtnombre);
@@ -367,7 +406,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmnomina";
             this.Text = "frmnomina";
-            this.Load += new System.EventHandler(this.frmnomina_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -410,5 +448,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Fecha;
+        private System.Windows.Forms.ComboBox comboBoxFecha;
     }
 }
