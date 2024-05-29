@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using skyedge.formularios;
-using skyedge.formularios.empleados;
 
 
 namespace skyedge
@@ -19,7 +18,7 @@ namespace skyedge
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmconsultaliquidacion());
+            Application.Run(new frmnomina());
         }
     }
 }
