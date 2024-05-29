@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using skyedge.formularios;
+using skyedge.formularios.empleados;
 
 
 namespace skyedge
