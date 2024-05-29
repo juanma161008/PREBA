@@ -42,10 +42,11 @@
             // 
             // txtemail
             // 
+            this.txtemail.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
             this.txtemail.Location = new System.Drawing.Point(40, 214);
             this.txtemail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(293, 22);
+            this.txtemail.Size = new System.Drawing.Size(293, 30);
             this.txtemail.TabIndex = 0;
             this.txtemail.TextChanged += new System.EventHandler(this.txtemail_TextChanged);
             // 
@@ -57,7 +58,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(35, 178);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 32);
+            this.label1.Size = new System.Drawing.Size(61, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "Email";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -70,17 +71,18 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(35, 252);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 32);
+            this.label2.Size = new System.Drawing.Size(99, 27);
             this.label2.TabIndex = 2;
             this.label2.Text = "Password";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtpassword
             // 
+            this.txtpassword.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
             this.txtpassword.Location = new System.Drawing.Point(43, 290);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtpassword.Name = "txtpassword";
-            this.txtpassword.Size = new System.Drawing.Size(289, 22);
+            this.txtpassword.Size = new System.Drawing.Size(289, 30);
             this.txtpassword.TabIndex = 3;
             this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             // 
@@ -91,7 +93,7 @@
             this.linkregistrarse.LinkColor = System.Drawing.Color.White;
             this.linkregistrarse.Location = new System.Drawing.Point(41, 326);
             this.linkregistrarse.Name = "linkregistrarse";
-            this.linkregistrarse.Size = new System.Drawing.Size(77, 16);
+            this.linkregistrarse.Size = new System.Drawing.Size(60, 13);
             this.linkregistrarse.TabIndex = 4;
             this.linkregistrarse.TabStop = true;
             this.linkregistrarse.Text = "Registrarse";
@@ -117,7 +119,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(80, 485);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 16);
+            this.label3.Size = new System.Drawing.Size(144, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Copyright © 2024 SKYEDGE";
             this.label3.Click += new System.EventHandler(this.label3_Click);

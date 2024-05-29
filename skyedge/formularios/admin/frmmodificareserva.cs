@@ -26,5 +26,10 @@ namespace skyedge.formularios
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

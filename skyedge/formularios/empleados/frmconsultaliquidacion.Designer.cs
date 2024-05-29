@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmconsultaliquidacion));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnguardar = new System.Windows.Forms.Button();
             this.comboBoxmes = new System.Windows.Forms.ComboBox();
             this.txtcedula = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnguardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,8 +61,22 @@
             this.panel1.Size = new System.Drawing.Size(728, 228);
             this.panel1.TabIndex = 1;
             // 
+            // btnguardar
+            // 
+            this.btnguardar.BackColor = System.Drawing.Color.Blue;
+            this.btnguardar.ForeColor = System.Drawing.Color.White;
+            this.btnguardar.Location = new System.Drawing.Point(324, 163);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(104, 29);
+            this.btnguardar.TabIndex = 11;
+            this.btnguardar.Text = "CONSULTAR";
+            this.btnguardar.UseVisualStyleBackColor = false;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
+            // 
             // comboBoxmes
             // 
+            this.comboBoxmes.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
             this.comboBoxmes.FormattingEnabled = true;
             this.comboBoxmes.Items.AddRange(new object[] {
             "2024-01",
@@ -79,14 +93,15 @@
             "2024-12"});
             this.comboBoxmes.Location = new System.Drawing.Point(397, 62);
             this.comboBoxmes.Name = "comboBoxmes";
-            this.comboBoxmes.Size = new System.Drawing.Size(273, 21);
+            this.comboBoxmes.Size = new System.Drawing.Size(273, 31);
             this.comboBoxmes.TabIndex = 7;
             // 
             // txtcedula
             // 
+            this.txtcedula.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
             this.txtcedula.Location = new System.Drawing.Point(21, 62);
             this.txtcedula.Name = "txtcedula";
-            this.txtcedula.Size = new System.Drawing.Size(332, 20);
+            this.txtcedula.Size = new System.Drawing.Size(332, 30);
             this.txtcedula.TabIndex = 2;
             // 
             // label3
@@ -108,19 +123,6 @@
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cedula";
-            // 
-            // btnguardar
-            // 
-            this.btnguardar.BackColor = System.Drawing.Color.Blue;
-            this.btnguardar.ForeColor = System.Drawing.Color.White;
-            this.btnguardar.Location = new System.Drawing.Point(324, 163);
-            this.btnguardar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(104, 29);
-            this.btnguardar.TabIndex = 11;
-            this.btnguardar.Text = "CONSULTAR";
-            this.btnguardar.UseVisualStyleBackColor = false;
-            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // frmconsultaliquidacion
             // 
