@@ -32,6 +32,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnbuscar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtpasajeros = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpvuelta = new System.Windows.Forms.DateTimePicker();
@@ -45,7 +46,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtpasajeros = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,6 +61,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1236, 259);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnbuscar
             // 
@@ -91,6 +92,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(878, 124);
             this.panel1.TabIndex = 0;
+            // 
+            // txtpasajeros
+            // 
+            this.txtpasajeros.Location = new System.Drawing.Point(369, 23);
+            this.txtpasajeros.Name = "txtpasajeros";
+            this.txtpasajeros.Size = new System.Drawing.Size(136, 22);
+            this.txtpasajeros.TabIndex = 14;
             // 
             // label5
             // 
@@ -223,13 +231,6 @@
             this.label3.Size = new System.Drawing.Size(323, 49);
             this.label3.TabIndex = 5;
             this.label3.Text = "CENTRO DE AYUDA";
-            // 
-            // txtpasajeros
-            // 
-            this.txtpasajeros.Location = new System.Drawing.Point(369, 23);
-            this.txtpasajeros.Name = "txtpasajeros";
-            this.txtpasajeros.Size = new System.Drawing.Size(136, 22);
-            this.txtpasajeros.TabIndex = 14;
             // 
             // frmreserva
             // 

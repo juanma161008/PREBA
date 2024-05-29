@@ -36,8 +36,12 @@ namespace skyedge.formularios
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
+            
             frmvuelosdisponibles frmA = new frmvuelosdisponibles();
-            frmA.lblpasajeros.Text= txtpasajeros.Text;
+            frmA.lblpasajeros.Text = txtpasajeros.Text;
+            frmA.lblfida.Text = cmborigen.Text;
+            frmA.lblregreso.Text = cmbdestino.Text;
+            frmA.lblFecha.Text = dtpida.Text;
             frmA.Show();
         }
     
@@ -55,6 +59,11 @@ namespace skyedge.formularios
         private void cmbpasajeros_SelectedIndexChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

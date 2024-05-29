@@ -58,6 +58,12 @@
     <Compile Include="formularios\admin\frmempleado.Designer.cs">
       <DependentUpon>frmempleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\admin\frmvueloregreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\admin\frmvueloregreso.Designer.cs">
+      <DependentUpon>frmvueloregreso.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\empleados\frmconsultaliquidacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,11 +118,11 @@
     <Compile Include="formularios\login\frmlogin.Designer.cs">
       <DependentUpon>frmlogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="formularios\admin\frmvuelo.cs">
+    <Compile Include="formularios\admin\frmvueloida.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\admin\frmvuelo.Designer.cs">
-      <DependentUpon>frmvuelo.cs</DependentUpon>
+    <Compile Include="formularios\admin\frmvueloida.Designer.cs">
+      <DependentUpon>frmvueloida.cs</DependentUpon>
     </Compile>
     <Compile Include="formularios\reserva\frmvuelosdisponibles.cs">
       <SubType>Form</SubType>
@@ -128,6 +134,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="formularios\admin\frmempleado.resx">
       <DependentUpon>frmempleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\admin\frmvueloregreso.resx">
+      <DependentUpon>frmvueloregreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\empleados\frmconsultaliquidacion.resx">
       <DependentUpon>frmconsultaliquidacion.cs</DependentUpon>
@@ -157,8 +166,8 @@
     <EmbeddedResource Include="formularios\login\frmlogin.resx">
       <DependentUpon>frmlogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\admin\frmvuelo.resx">
-      <DependentUpon>frmvuelo.cs</DependentUpon>
+    <EmbeddedResource Include="formularios\admin\frmvueloida.resx">
+      <DependentUpon>frmvueloida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\reserva\frmvuelosdisponibles.resx">
       <DependentUpon>frmvuelosdisponibles.cs</DependentUpon>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using skyedge.formularios;
+using skyedge.formularios.admin;
 using skyedge.formularios.empleados;
 
 
@@ -19,7 +20,7 @@ namespace skyedge
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmnomina());
+            Application.Run(new frmreserva());
         }
     }
 }
