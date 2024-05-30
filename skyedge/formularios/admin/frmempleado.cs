@@ -109,13 +109,13 @@ namespace skyedge.formularios
         {
             if (boton == 1)
             {
-                cmd = new SqlCommand("insert into tblEmpleado values('" + txtcedula.Text + "','" + txtnombre.Text + "','" + txtapellido.Text + "','" + txtemail.Text + "','" + txtdireccion.Text + "','" + txtcargo.Text + "','" + txtsalario + "')", cn.AbrirConexion());
+                cmd = new SqlCommand("insert into tblEmpleados values('" + txtcedula.Text + "','" + txtnombre.Text + "','" + txtapellido.Text + "','" + txtemail.Text + "','" + txtdireccion.Text + "','" + txtcargo.Text + "','" + txtsalario + "')", cn.AbrirConexion());
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("empleado guardado");
             }
             if (boton == 3)
             {
-                cmd = new SqlCommand("update  tblempleado set cedula='" + txtcedula.Text + "',nombre='" + txtnombre.Text + "',apellido='" + txtapellido.Text + "',email='" + txtemail.Text + "',direccion='" + txtdireccion.Text + "',cargo='" + txtsalario.Text + "' where cedula='" + txtcedula.Text + "'", cn.AbrirConexion());
+                cmd = new SqlCommand("update  tblempleados set cedula='" + txtcedula.Text + "',nombre='" + txtnombre.Text + "',apellido='" + txtapellido.Text + "',email='" + txtemail.Text + "',direccion='" + txtdireccion.Text + "',cargo='" + txtsalario.Text + "' where cedula='" + txtcedula.Text + "'", cn.AbrirConexion());
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("empleado modificado ");
             }
@@ -134,7 +134,7 @@ namespace skyedge.formularios
 
         private void txtcedula_Leave(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("select * from tblEmpleado where id_Personal='" + txtcedula.Text + "'", cn.AbrirConexion());
+            cmd = new SqlCommand("select * from tblEmpleados where id_Personal='" + txtcedula.Text + "'", cn.AbrirConexion());
             da = new SqlDataAdapter(cmd);
             dt = new DataTable();
             da.Fill(dt);
