@@ -76,12 +76,6 @@
     <Compile Include="formularios\empleados\frmmenuempleado.Designer.cs">
       <DependentUpon>frmmenuempleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="formularios\empleados\frmnominaempleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formularios\empleados\frmnominaempleado.Designer.cs">
-      <DependentUpon>frmnominaempleado.cs</DependentUpon>
-    </Compile>
     <Compile Include="formularios\empleados\frmreportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,9 +149,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\empleados\frmmenuempleado.resx">
       <DependentUpon>frmmenuempleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formularios\empleados\frmnominaempleado.resx">
-      <DependentUpon>frmnominaempleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\empleados\frmreportes.resx">
       <DependentUpon>frmreportes.cs</DependentUpon>
