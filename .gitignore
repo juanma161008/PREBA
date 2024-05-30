@@ -32,3 +32,6 @@
 /skyedge/obj/Debug/skyedge.csproj.CoreCompileInputs.cache
 /skyedge/obj/Debug/skyedge.csproj.FileListAbsolute.txt
 /skyedge/obj/Debug/skyedge.formularios.empleados.frmnominaempleado.resources
+/skyedge/obj/Debug/skyedge.csproj.AssemblyReference.cache
+*.resources
+/skyedge/obj/Release/skyedge.csproj.AssemblyReference.cache

@@ -67,31 +67,35 @@
             // 
             // txthoras
             // 
+            this.txthoras.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
             this.txthoras.Location = new System.Drawing.Point(323, 407);
             this.txthoras.Name = "txthoras";
-            this.txthoras.Size = new System.Drawing.Size(211, 20);
+            this.txthoras.Size = new System.Drawing.Size(211, 30);
             this.txthoras.TabIndex = 28;
             // 
             // txtsalariobasico
             // 
+            this.txtsalariobasico.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
             this.txtsalariobasico.Location = new System.Drawing.Point(334, 353);
             this.txtsalariobasico.Name = "txtsalariobasico";
-            this.txtsalariobasico.Size = new System.Drawing.Size(193, 20);
+            this.txtsalariobasico.Size = new System.Drawing.Size(193, 30);
             this.txtsalariobasico.TabIndex = 27;
             // 
             // txtnombre
             // 
             this.txtnombre.Enabled = false;
+            this.txtnombre.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
             this.txtnombre.Location = new System.Drawing.Point(261, 291);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(231, 20);
+            this.txtnombre.Size = new System.Drawing.Size(231, 30);
             this.txtnombre.TabIndex = 26;
             // 
             // txtcedula
             // 
+            this.txtcedula.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
             this.txtcedula.Location = new System.Drawing.Point(261, 229);
             this.txtcedula.Name = "txtcedula";
-            this.txtcedula.Size = new System.Drawing.Size(220, 20);
+            this.txtcedula.Size = new System.Drawing.Size(220, 30);
             this.txtcedula.TabIndex = 25;
             this.txtcedula.Leave += new System.EventHandler(this.txtcedula_Leave_1);
             // 
@@ -157,16 +161,17 @@
             this.panel4.BackColor = System.Drawing.Color.Maroon;
             this.panel4.Controls.Add(this.txtdevengado);
             this.panel4.Controls.Add(this.label14);
-            this.panel4.Location = new System.Drawing.Point(649, 431);
+            this.panel4.Location = new System.Drawing.Point(634, 431);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(402, 181);
+            this.panel4.Size = new System.Drawing.Size(417, 181);
             this.panel4.TabIndex = 19;
             // 
             // txtdevengado
             // 
-            this.txtdevengado.Location = new System.Drawing.Point(75, 79);
+            this.txtdevengado.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
+            this.txtdevengado.Location = new System.Drawing.Point(80, 103);
             this.txtdevengado.Name = "txtdevengado";
-            this.txtdevengado.Size = new System.Drawing.Size(271, 20);
+            this.txtdevengado.Size = new System.Drawing.Size(271, 30);
             this.txtdevengado.TabIndex = 19;
             // 
             // label14
@@ -175,7 +180,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(112, 15);
+            this.label14.Location = new System.Drawing.Point(144, 42);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(145, 20);
             this.label14.TabIndex = 18;
@@ -192,37 +197,41 @@
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Location = new System.Drawing.Point(645, 155);
+            this.panel3.Location = new System.Drawing.Point(634, 155);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(390, 210);
+            this.panel3.Size = new System.Drawing.Size(417, 210);
             this.panel3.TabIndex = 18;
             // 
             // txtvalorextras
             // 
-            this.txtvalorextras.Location = new System.Drawing.Point(175, 130);
+            this.txtvalorextras.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
+            this.txtvalorextras.Location = new System.Drawing.Point(195, 150);
             this.txtvalorextras.Name = "txtvalorextras";
-            this.txtvalorextras.Size = new System.Drawing.Size(200, 20);
+            this.txtvalorextras.Size = new System.Drawing.Size(197, 30);
             this.txtvalorextras.TabIndex = 21;
             // 
             // txthorasextras
             // 
-            this.txthorasextras.Location = new System.Drawing.Point(185, 90);
+            this.txthorasextras.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
+            this.txthorasextras.Location = new System.Drawing.Point(195, 101);
             this.txthorasextras.Name = "txthorasextras";
-            this.txthorasextras.Size = new System.Drawing.Size(190, 20);
+            this.txthorasextras.Size = new System.Drawing.Size(197, 30);
             this.txthorasextras.TabIndex = 20;
             // 
             // txtauxiliodetransporte
             // 
-            this.txtauxiliodetransporte.Location = new System.Drawing.Point(230, 53);
+            this.txtauxiliodetransporte.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
+            this.txtauxiliodetransporte.Location = new System.Drawing.Point(195, 53);
             this.txtauxiliodetransporte.Name = "txtauxiliodetransporte";
-            this.txtauxiliodetransporte.Size = new System.Drawing.Size(146, 20);
+            this.txtauxiliodetransporte.Size = new System.Drawing.Size(199, 30);
             this.txtauxiliodetransporte.TabIndex = 19;
             // 
             // txtsalariobruto
             // 
-            this.txtsalariobruto.Location = new System.Drawing.Point(190, 16);
+            this.txtsalariobruto.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
+            this.txtsalariobruto.Location = new System.Drawing.Point(195, 16);
             this.txtsalariobruto.Name = "txtsalariobruto";
-            this.txtsalariobruto.Size = new System.Drawing.Size(187, 20);
+            this.txtsalariobruto.Size = new System.Drawing.Size(200, 30);
             this.txtsalariobruto.TabIndex = 18;
             // 
             // label13
@@ -231,7 +240,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(15, 126);
+            this.label13.Location = new System.Drawing.Point(14, 152);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(112, 20);
             this.label13.TabIndex = 17;
@@ -243,7 +252,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(8, 87);
+            this.label12.Location = new System.Drawing.Point(8, 111);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(118, 20);
             this.label12.TabIndex = 16;
@@ -255,7 +264,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(17, 51);
+            this.label11.Location = new System.Drawing.Point(8, 63);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(178, 20);
             this.label11.TabIndex = 15;
@@ -267,7 +276,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(17, 12);
+            this.label10.Location = new System.Drawing.Point(14, 26);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(114, 20);
             this.label10.TabIndex = 14;
@@ -365,23 +374,24 @@
             // 
             // comboBoxFecha
             // 
+            this.comboBoxFecha.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
             this.comboBoxFecha.FormattingEnabled = true;
             this.comboBoxFecha.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"});
             this.comboBoxFecha.Location = new System.Drawing.Point(251, 170);
             this.comboBoxFecha.Name = "comboBoxFecha";
-            this.comboBoxFecha.Size = new System.Drawing.Size(229, 21);
+            this.comboBoxFecha.Size = new System.Drawing.Size(229, 31);
             this.comboBoxFecha.TabIndex = 30;
             // 
             // frmnomina

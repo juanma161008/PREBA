@@ -35,11 +35,13 @@
             this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvinfopasajeros)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvinfopasajeros
             // 
+            this.dgvinfopasajeros.BackgroundColor = System.Drawing.Color.Indigo;
             this.dgvinfopasajeros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvinfopasajeros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre,
@@ -52,7 +54,7 @@
             this.dgvinfopasajeros.Name = "dgvinfopasajeros";
             this.dgvinfopasajeros.RowHeadersWidth = 51;
             this.dgvinfopasajeros.RowTemplate.Height = 24;
-            this.dgvinfopasajeros.Size = new System.Drawing.Size(804, 402);
+            this.dgvinfopasajeros.Size = new System.Drawing.Size(806, 420);
             this.dgvinfopasajeros.TabIndex = 0;
             this.dgvinfopasajeros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvinfopasajeros_CellContentClick);
             // 
@@ -98,11 +100,21 @@
             this.telefono.Name = "telefono";
             this.telefono.Width = 125;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(227, 461);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(380, 50);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "pagar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frminfopasajeros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 450);
+            this.ClientSize = new System.Drawing.Size(841, 526);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvinfopasajeros);
             this.Name = "frminfopasajeros";
             this.Text = "frminfopasajeros";
@@ -119,5 +131,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaN;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
         public System.Windows.Forms.DataGridView dgvinfopasajeros;
+        private System.Windows.Forms.Button button1;
     }
 }

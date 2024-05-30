@@ -30,27 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmvuelosdisponibles));
             this.dgvida = new System.Windows.Forms.DataGridView();
-            this.Elegir = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Origen_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Destino_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hora_salida_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hora_llegada_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvvuelta = new System.Windows.Forms.DataGridView();
             this.Elegir1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.origen_vuelta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.destino_vuelta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_vuelta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hora_salida_vuelta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hora_llegada_vuelta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio_vuelta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.origen_regreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.destino_regreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_regreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hora_salida_regreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hora_llegada_regreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio_regreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btncontinuar = new System.Windows.Forms.Button();
             this.lblpasajeros = new System.Windows.Forms.Label();
             this.lblfida = new System.Windows.Forms.Label();
-            this.lblfregreso = new System.Windows.Forms.Label();
+            this.lblregreso = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.Elegir = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.origen_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.destino_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hora_salida_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hora_llegada_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvvuelta)).BeginInit();
             this.SuspendLayout();
@@ -61,8 +62,8 @@
             this.dgvida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvida.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Elegir,
-            this.Origen_ida,
-            this.Destino_ida,
+            this.origen_ida,
+            this.destino_ida,
             this.fecha_ida,
             this.hora_salida_ida,
             this.hora_llegada_ida,
@@ -73,56 +74,6 @@
             this.dgvida.RowTemplate.Height = 24;
             this.dgvida.Size = new System.Drawing.Size(923, 166);
             this.dgvida.TabIndex = 0;
-            this.dgvida.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvida_CellContentClick);
-            // 
-            // Elegir
-            // 
-            this.Elegir.HeaderText = "Elegir";
-            this.Elegir.MinimumWidth = 6;
-            this.Elegir.Name = "Elegir";
-            this.Elegir.Width = 125;
-            // 
-            // Origen_ida
-            // 
-            this.Origen_ida.HeaderText = "Origen";
-            this.Origen_ida.MinimumWidth = 6;
-            this.Origen_ida.Name = "Origen_ida";
-            this.Origen_ida.Width = 125;
-            // 
-            // Destino_ida
-            // 
-            this.Destino_ida.HeaderText = "Destino";
-            this.Destino_ida.MinimumWidth = 6;
-            this.Destino_ida.Name = "Destino_ida";
-            this.Destino_ida.Width = 125;
-            // 
-            // fecha_ida
-            // 
-            this.fecha_ida.HeaderText = "fecha";
-            this.fecha_ida.MinimumWidth = 6;
-            this.fecha_ida.Name = "fecha_ida";
-            this.fecha_ida.Width = 125;
-            // 
-            // hora_salida_ida
-            // 
-            this.hora_salida_ida.HeaderText = "Hora salida";
-            this.hora_salida_ida.MinimumWidth = 6;
-            this.hora_salida_ida.Name = "hora_salida_ida";
-            this.hora_salida_ida.Width = 125;
-            // 
-            // hora_llegada_ida
-            // 
-            this.hora_llegada_ida.HeaderText = "Hora llegada";
-            this.hora_llegada_ida.MinimumWidth = 6;
-            this.hora_llegada_ida.Name = "hora_llegada_ida";
-            this.hora_llegada_ida.Width = 125;
-            // 
-            // precio_ida
-            // 
-            this.precio_ida.HeaderText = "Precio";
-            this.precio_ida.MinimumWidth = 6;
-            this.precio_ida.Name = "precio_ida";
-            this.precio_ida.Width = 125;
             // 
             // label1
             // 
@@ -152,17 +103,17 @@
             this.dgvvuelta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvvuelta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Elegir1,
-            this.origen_vuelta,
-            this.destino_vuelta,
-            this.fecha_vuelta,
-            this.hora_salida_vuelta,
-            this.hora_llegada_vuelta,
-            this.precio_vuelta});
-            this.dgvvuelta.Location = new System.Drawing.Point(22, 468);
+            this.origen_regreso,
+            this.destino_regreso,
+            this.fecha_regreso,
+            this.hora_salida_regreso,
+            this.hora_llegada_regreso,
+            this.precio_regreso});
+            this.dgvvuelta.Location = new System.Drawing.Point(22, 467);
             this.dgvvuelta.Name = "dgvvuelta";
             this.dgvvuelta.RowHeadersWidth = 51;
             this.dgvvuelta.RowTemplate.Height = 24;
-            this.dgvvuelta.Size = new System.Drawing.Size(929, 156);
+            this.dgvvuelta.Size = new System.Drawing.Size(929, 157);
             this.dgvvuelta.TabIndex = 4;
             // 
             // Elegir1
@@ -170,53 +121,51 @@
             this.Elegir1.HeaderText = "Elegir";
             this.Elegir1.MinimumWidth = 6;
             this.Elegir1.Name = "Elegir1";
+            this.Elegir1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Elegir1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Elegir1.Width = 125;
             // 
-            // origen_vuelta
+            // origen_regreso
             // 
-            this.origen_vuelta.HeaderText = "Origen";
-            this.origen_vuelta.MinimumWidth = 6;
-            this.origen_vuelta.Name = "origen_vuelta";
-            this.origen_vuelta.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.origen_vuelta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.origen_vuelta.Width = 125;
+            this.origen_regreso.HeaderText = "Origen";
+            this.origen_regreso.MinimumWidth = 6;
+            this.origen_regreso.Name = "origen_regreso";
+            this.origen_regreso.Width = 125;
             // 
-            // destino_vuelta
+            // destino_regreso
             // 
-            this.destino_vuelta.HeaderText = "Destino";
-            this.destino_vuelta.MinimumWidth = 6;
-            this.destino_vuelta.Name = "destino_vuelta";
-            this.destino_vuelta.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.destino_vuelta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.destino_vuelta.Width = 125;
+            this.destino_regreso.HeaderText = "Destino";
+            this.destino_regreso.MinimumWidth = 6;
+            this.destino_regreso.Name = "destino_regreso";
+            this.destino_regreso.Width = 125;
             // 
-            // fecha_vuelta
+            // fecha_regreso
             // 
-            this.fecha_vuelta.HeaderText = "Fecha";
-            this.fecha_vuelta.MinimumWidth = 6;
-            this.fecha_vuelta.Name = "fecha_vuelta";
-            this.fecha_vuelta.Width = 125;
+            this.fecha_regreso.HeaderText = "Fecha";
+            this.fecha_regreso.MinimumWidth = 6;
+            this.fecha_regreso.Name = "fecha_regreso";
+            this.fecha_regreso.Width = 125;
             // 
-            // hora_salida_vuelta
+            // hora_salida_regreso
             // 
-            this.hora_salida_vuelta.HeaderText = "Hora salida";
-            this.hora_salida_vuelta.MinimumWidth = 6;
-            this.hora_salida_vuelta.Name = "hora_salida_vuelta";
-            this.hora_salida_vuelta.Width = 125;
+            this.hora_salida_regreso.HeaderText = "Hora salida";
+            this.hora_salida_regreso.MinimumWidth = 6;
+            this.hora_salida_regreso.Name = "hora_salida_regreso";
+            this.hora_salida_regreso.Width = 125;
             // 
-            // hora_llegada_vuelta
+            // hora_llegada_regreso
             // 
-            this.hora_llegada_vuelta.HeaderText = "Hora llegada";
-            this.hora_llegada_vuelta.MinimumWidth = 6;
-            this.hora_llegada_vuelta.Name = "hora_llegada_vuelta";
-            this.hora_llegada_vuelta.Width = 125;
+            this.hora_llegada_regreso.HeaderText = "Hora llegada";
+            this.hora_llegada_regreso.MinimumWidth = 6;
+            this.hora_llegada_regreso.Name = "hora_llegada_regreso";
+            this.hora_llegada_regreso.Width = 125;
             // 
-            // precio_vuelta
+            // precio_regreso
             // 
-            this.precio_vuelta.HeaderText = "Pecio";
-            this.precio_vuelta.MinimumWidth = 6;
-            this.precio_vuelta.Name = "precio_vuelta";
-            this.precio_vuelta.Width = 125;
+            this.precio_regreso.HeaderText = "Precio";
+            this.precio_regreso.MinimumWidth = 6;
+            this.precio_regreso.Name = "precio_regreso";
+            this.precio_regreso.Width = 125;
             // 
             // btncontinuar
             // 
@@ -247,14 +196,74 @@
             this.lblfida.TabIndex = 7;
             this.lblfida.Text = "label3";
             // 
-            // lblfregreso
+            // lblregreso
             // 
-            this.lblfregreso.AutoSize = true;
-            this.lblfregreso.Location = new System.Drawing.Point(695, 157);
-            this.lblfregreso.Name = "lblfregreso";
-            this.lblfregreso.Size = new System.Drawing.Size(44, 16);
-            this.lblfregreso.TabIndex = 8;
-            this.lblfregreso.Text = "label3";
+            this.lblregreso.AutoSize = true;
+            this.lblregreso.Location = new System.Drawing.Point(695, 157);
+            this.lblregreso.Name = "lblregreso";
+            this.lblregreso.Size = new System.Drawing.Size(44, 16);
+            this.lblregreso.TabIndex = 8;
+            this.lblregreso.Text = "label3";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(765, 162);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(44, 16);
+            this.lblFecha.TabIndex = 9;
+            this.lblFecha.Text = "label3";
+            // 
+            // Elegir
+            // 
+            this.Elegir.HeaderText = "Elegir";
+            this.Elegir.MinimumWidth = 6;
+            this.Elegir.Name = "Elegir";
+            this.Elegir.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Elegir.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Elegir.Width = 125;
+            // 
+            // origen_ida
+            // 
+            this.origen_ida.HeaderText = "Origen";
+            this.origen_ida.MinimumWidth = 6;
+            this.origen_ida.Name = "origen_ida";
+            this.origen_ida.Width = 125;
+            // 
+            // destino_ida
+            // 
+            this.destino_ida.HeaderText = "Destino";
+            this.destino_ida.MinimumWidth = 6;
+            this.destino_ida.Name = "destino_ida";
+            this.destino_ida.Width = 125;
+            // 
+            // fecha_ida
+            // 
+            this.fecha_ida.HeaderText = "Fecha";
+            this.fecha_ida.MinimumWidth = 6;
+            this.fecha_ida.Name = "fecha_ida";
+            this.fecha_ida.Width = 125;
+            // 
+            // hora_salida_ida
+            // 
+            this.hora_salida_ida.HeaderText = "Hora salida";
+            this.hora_salida_ida.MinimumWidth = 6;
+            this.hora_salida_ida.Name = "hora_salida_ida";
+            this.hora_salida_ida.Width = 125;
+            // 
+            // hora_llegada_ida
+            // 
+            this.hora_llegada_ida.HeaderText = "Hora Llegada";
+            this.hora_llegada_ida.MinimumWidth = 6;
+            this.hora_llegada_ida.Name = "hora_llegada_ida";
+            this.hora_llegada_ida.Width = 125;
+            // 
+            // precio_ida
+            // 
+            this.precio_ida.HeaderText = "Precio";
+            this.precio_ida.MinimumWidth = 6;
+            this.precio_ida.Name = "precio_ida";
+            this.precio_ida.Width = 125;
             // 
             // frmvuelosdisponibles
             // 
@@ -262,7 +271,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1266, 663);
-            this.Controls.Add(this.lblfregreso);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.lblregreso);
             this.Controls.Add(this.lblfida);
             this.Controls.Add(this.lblpasajeros);
             this.Controls.Add(this.btncontinuar);
@@ -287,22 +297,23 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvvuelta;
         private System.Windows.Forms.Button btncontinuar;
+        public System.Windows.Forms.Label lblpasajeros;
+        public System.Windows.Forms.Label lblfida;
+        public System.Windows.Forms.Label lblregreso;
+        public System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Elegir1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn origen_vuelta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn destino_vuelta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_vuelta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hora_salida_vuelta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hora_llegada_vuelta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio_vuelta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn origen_regreso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn destino_regreso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_regreso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hora_salida_regreso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hora_llegada_regreso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio_regreso;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Elegir;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Origen_ida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Destino_ida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn origen_ida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn destino_ida;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_ida;
         private System.Windows.Forms.DataGridViewTextBoxColumn hora_salida_ida;
         private System.Windows.Forms.DataGridViewTextBoxColumn hora_llegada_ida;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio_ida;
-        public System.Windows.Forms.Label lblpasajeros;
-        public System.Windows.Forms.Label lblfida;
-        public System.Windows.Forms.Label lblfregreso;
     }
 }
