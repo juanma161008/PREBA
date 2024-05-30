@@ -31,7 +31,8 @@ namespace skyedge.formularios.empleados
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            frmreportes frmreportesForm = new frmreportes();
+            frmreportesForm.Show();
         }
     }
 }

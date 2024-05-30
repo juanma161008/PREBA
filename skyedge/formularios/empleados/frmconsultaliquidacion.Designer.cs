@@ -136,6 +136,7 @@
             this.DoubleBuffered = true;
             this.Name = "frmconsultaliquidacion";
             this.Text = "frmconsultaliquidacion";
+            this.Load += new System.EventHandler(this.frmconsultaliquidacion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

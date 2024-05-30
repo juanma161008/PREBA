@@ -137,5 +137,10 @@ namespace skyedge.formularios.empleados
                 MessageBox.Show("Error al realizar la consulta: " + ex.Message);
             }
         }
+
+        private void frmconsultaliquidacion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
