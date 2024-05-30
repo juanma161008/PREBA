@@ -28,5 +28,11 @@ namespace skyedge.formularios.empleados
             consultaLiquidacionForm.Show();
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmreportes frmreportesForm = new frmreportes();
+            frmreportesForm.Show();
+        }
     }
 }
