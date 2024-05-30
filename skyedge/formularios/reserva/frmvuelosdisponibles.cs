@@ -48,7 +48,7 @@ namespace skyedge.formularios
                     foreach (DataRow row in dt.Rows)
                     {
                         dgvida.Rows.Add(
-                            false, 
+                            false,
                             row["origen_ida"].ToString(),
                             row["destino_ida"].ToString(),
                             Convert.ToDateTime(row["fecha_ida"]).ToString("dd/MM/yyyy"),
@@ -60,7 +60,6 @@ namespace skyedge.formularios
                 }
             }
         }
-
 
         private void LlenarDataGridViewVuelta()
         {
@@ -96,53 +95,47 @@ namespace skyedge.formularios
         {
             LlenarDataGridViewIda();
             LlenarDataGridViewVuelta();
- 
         }
-        private List<DataRow> ObtenerFilasSeleccionadasIda()
+
+        private List<DataGridViewRow> ObtenerFilasSeleccionadasIda()
         {
-            List<DataRow> filasSeleccionadas = new List<DataRow>();
+            List<DataGridViewRow> filasSeleccionadas = new List<DataGridViewRow>();
             foreach (DataGridViewRow fila in dgvida.Rows)
             {
-                if (fila.DataBoundItem != null && fila.Cells[0].Value != null && (bool)fila.Cells[0].Value) // Verificar si el DataBoundItem y el checkbox están seleccionados
+                if (fila.DataBoundItem != null && fila.Cells[0].Value != null && (bool)fila.Cells[0].Value)
                 {
-                    DataRowView filaView = fila.DataBoundItem as DataRowView;
-                    if (filaView != null)
-                    {
-                        filasSeleccionadas.Add(filaView.Row);
-                    }
+                    filasSeleccionadas.Add(fila);
                 }
             }
             return filasSeleccionadas;
         }
 
-        private List<DataRow> ObtenerFilasSeleccionadasVuelta()
+        private List<DataGridViewRow> ObtenerFilasSeleccionadasVuelta()
         {
-            List<DataRow> filasSeleccionadas = new List<DataRow>();
+            List<DataGridViewRow> filasSeleccionadas = new List<DataGridViewRow>();
             foreach (DataGridViewRow fila in dgvvuelta.Rows)
             {
-                if (fila.DataBoundItem != null && fila.Cells[0].Value != null && (bool)fila.Cells[0].Value) // Verificar si el DataBoundItem y el checkbox están seleccionados
+                if (fila.DataBoundItem != null && fila.Cells[0].Value != null && (bool)fila.Cells[0].Value)
                 {
-                    DataRowView filaView = fila.DataBoundItem as DataRowView;
-                    if (filaView != null)
-                    {
-                        filasSeleccionadas.Add(filaView.Row);
-                    }
+                    filasSeleccionadas.Add(fila);
                 }
             }
             return filasSeleccionadas;
         }
+
         private void btncontinuar_Click(object sender, EventArgs e)
         {
-            List<DataRow> filasIdaSeleccionadas = ObtenerFilasSeleccionadasIda();
-            List<DataRow> filasVueltaSeleccionadas = ObtenerFilasSeleccionadasVuelta();
+            List<DataGridViewRow> filasIdaSeleccionadas = ObtenerFilasSeleccionadasIda();
+            List<DataGridViewRow> filasVueltaSeleccionadas = ObtenerFilasSeleccionadasVuelta();
 
             frminfopasajeros frmA = new frminfopasajeros(filasIdaSeleccionadas, filasVueltaSeleccionadas);
             frmA.dgvinfopasajeros.Rows.Add(Int32.Parse(lblpasajeros.Text));
             frmA.Show();
         }
+
         private void dgvvuelta_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            // No es necesario implementar nada aquí, ya que esta función se activa cuando se hace clic en cualquier celda del DataGridView de vuelta.
         }
     }
 }

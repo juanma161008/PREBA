@@ -40,15 +40,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnguardar = new System.Windows.Forms.Button();
             this.dgvida = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dgvvuelta = new System.Windows.Forms.DataGridView();
             this.origen_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.destino_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hora_salida_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hora_llegada_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dgvvuelta = new System.Windows.Forms.DataGridView();
             this.origen_regreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.destino_regreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha_regreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -148,6 +148,7 @@
             this.btnguardar.TabIndex = 3;
             this.btnguardar.Text = "GUARDAR";
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // dgvida
             // 
@@ -166,47 +167,6 @@
             this.dgvida.RowTemplate.Height = 24;
             this.dgvida.Size = new System.Drawing.Size(801, 71);
             this.dgvida.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(373, 365);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(429, 32);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "INFORMACION DEL VUELO IDA";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(332, 519);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(508, 32);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "INFORMACION DE VUELO REGRESO";
-            // 
-            // dgvvuelta
-            // 
-            this.dgvvuelta.BackgroundColor = System.Drawing.Color.MediumPurple;
-            this.dgvvuelta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvvuelta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.origen_regreso,
-            this.destino_regreso,
-            this.fecha_regreso,
-            this.hora_salida_regreso,
-            this.hora_llegada_regreso,
-            this.precio_regreso});
-            this.dgvvuelta.Location = new System.Drawing.Point(173, 567);
-            this.dgvvuelta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvvuelta.Name = "dgvvuelta";
-            this.dgvvuelta.RowHeadersWidth = 51;
-            this.dgvvuelta.RowTemplate.Height = 24;
-            this.dgvvuelta.Size = new System.Drawing.Size(800, 72);
-            this.dgvvuelta.TabIndex = 8;
             // 
             // origen_ida
             // 
@@ -255,6 +215,47 @@
             this.precio_ida.Name = "precio_ida";
             this.precio_ida.ReadOnly = true;
             this.precio_ida.Width = 125;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(373, 365);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(429, 32);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "INFORMACION DEL VUELO IDA";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(332, 519);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(508, 32);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "INFORMACION DE VUELO REGRESO";
+            // 
+            // dgvvuelta
+            // 
+            this.dgvvuelta.BackgroundColor = System.Drawing.Color.MediumPurple;
+            this.dgvvuelta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvvuelta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.origen_regreso,
+            this.destino_regreso,
+            this.fecha_regreso,
+            this.hora_salida_regreso,
+            this.hora_llegada_regreso,
+            this.precio_regreso});
+            this.dgvvuelta.Location = new System.Drawing.Point(173, 567);
+            this.dgvvuelta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvvuelta.Name = "dgvvuelta";
+            this.dgvvuelta.RowHeadersWidth = 51;
+            this.dgvvuelta.RowTemplate.Height = 24;
+            this.dgvvuelta.Size = new System.Drawing.Size(800, 72);
+            this.dgvvuelta.TabIndex = 8;
             // 
             // origen_regreso
             // 
