@@ -22,6 +22,8 @@ namespace skyedge.formularios
             this.destino = destino;
             this.fechaSalida = fechaSalida;
             this.fechaRegreso = fechaRegreso;
+            LlenarDataGridViewIda();
+            LlenarDataGridViewVuelta();
         }
 
         public frmvuelosdisponibles()

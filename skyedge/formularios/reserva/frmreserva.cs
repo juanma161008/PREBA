@@ -36,7 +36,6 @@ namespace skyedge.formularios
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
-            
             frmvuelosdisponibles frmA = new frmvuelosdisponibles();
             frmA.lblpasajeros.Text = txtpasajeros.Text;
             frmA.lblfida.Text = cmborigen.Text;
