@@ -30,19 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmmodificareserva));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtdestino = new System.Windows.Forms.TextBox();
+            this.txtorigen = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtfechavuelo = new System.Windows.Forms.TextBox();
+            this.txtidreserva = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnultimo = new System.Windows.Forms.Button();
@@ -64,86 +58,37 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Maroon;
-            this.panel3.Controls.Add(this.textBox6);
-            this.panel3.Controls.Add(this.textBox7);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.textBox5);
-            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.txtdestino);
+            this.panel3.Controls.Add(this.txtorigen);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.textBox3);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtfechavuelo);
+            this.panel3.Controls.Add(this.txtidreserva);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(293, 132);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(430, 303);
+            this.panel3.Size = new System.Drawing.Size(430, 243);
             this.panel3.TabIndex = 43;
             // 
-            // textBox6
+            // txtdestino
             // 
-            this.textBox6.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
-            this.textBox6.Location = new System.Drawing.Point(154, 254);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(233, 30);
-            this.textBox6.TabIndex = 13;
+            this.txtdestino.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
+            this.txtdestino.Location = new System.Drawing.Point(154, 148);
+            this.txtdestino.Margin = new System.Windows.Forms.Padding(2);
+            this.txtdestino.Name = "txtdestino";
+            this.txtdestino.Size = new System.Drawing.Size(233, 30);
+            this.txtdestino.TabIndex = 9;
             // 
-            // textBox7
+            // txtorigen
             // 
-            this.textBox7.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
-            this.textBox7.Location = new System.Drawing.Point(154, 217);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(232, 30);
-            this.textBox7.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(32, 254);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 27);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "CEDULA";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(32, 217);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 27);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "NOMBRE";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
-            this.textBox5.Location = new System.Drawing.Point(154, 171);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(233, 30);
-            this.textBox5.TabIndex = 9;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
-            this.textBox4.Location = new System.Drawing.Point(154, 131);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(232, 30);
-            this.textBox4.TabIndex = 8;
+            this.txtorigen.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
+            this.txtorigen.Location = new System.Drawing.Point(154, 99);
+            this.txtorigen.Margin = new System.Windows.Forms.Padding(2);
+            this.txtorigen.Name = "txtorigen";
+            this.txtorigen.Size = new System.Drawing.Size(232, 30);
+            this.txtorigen.TabIndex = 8;
             // 
             // label5
             // 
@@ -162,65 +107,44 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(32, 171);
+            this.label4.Location = new System.Drawing.Point(30, 150);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 27);
             this.label4.TabIndex = 2;
             this.label4.Text = "DESTINO";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(27, 96);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 27);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "CLASE";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
-            this.textBox3.Location = new System.Drawing.Point(154, 93);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(232, 30);
-            this.textBox3.TabIndex = 7;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(32, 134);
+            this.label3.Location = new System.Drawing.Point(32, 102);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 27);
             this.label3.TabIndex = 1;
             this.label3.Text = "ORIGEN";
             // 
-            // textBox2
+            // txtfechavuelo
             // 
-            this.textBox2.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
-            this.textBox2.Location = new System.Drawing.Point(203, 55);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(204, 30);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtfechavuelo.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
+            this.txtfechavuelo.Location = new System.Drawing.Point(203, 55);
+            this.txtfechavuelo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfechavuelo.Name = "txtfechavuelo";
+            this.txtfechavuelo.Size = new System.Drawing.Size(204, 30);
+            this.txtfechavuelo.TabIndex = 6;
             // 
-            // textBox1
+            // txtidreserva
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
-            this.textBox1.Location = new System.Drawing.Point(154, 14);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 30);
-            this.textBox1.TabIndex = 5;
+            this.txtidreserva.BackColor = System.Drawing.Color.White;
+            this.txtidreserva.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
+            this.txtidreserva.Location = new System.Drawing.Point(154, 14);
+            this.txtidreserva.Margin = new System.Windows.Forms.Padding(2);
+            this.txtidreserva.Name = "txtidreserva";
+            this.txtidreserva.Size = new System.Drawing.Size(233, 30);
+            this.txtidreserva.TabIndex = 5;
             // 
             // label2
             // 
@@ -233,7 +157,6 @@
             this.label2.Size = new System.Drawing.Size(119, 29);
             this.label2.TabIndex = 0;
             this.label2.Text = "ID RESERVA";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
             // 
@@ -243,7 +166,7 @@
             this.panel2.Controls.Add(this.btnanterior);
             this.panel2.Controls.Add(this.btnprimero);
             this.panel2.Location = new System.Drawing.Point(293, 452);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(430, 51);
             this.panel2.TabIndex = 42;
@@ -252,7 +175,7 @@
             // 
             this.btnultimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnultimo.Location = new System.Drawing.Point(336, 6);
-            this.btnultimo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnultimo.Margin = new System.Windows.Forms.Padding(2);
             this.btnultimo.Name = "btnultimo";
             this.btnultimo.Size = new System.Drawing.Size(71, 28);
             this.btnultimo.TabIndex = 3;
@@ -263,7 +186,7 @@
             // 
             this.btnsiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsiguiente.Location = new System.Drawing.Point(238, 6);
-            this.btnsiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.btnsiguiente.Name = "btnsiguiente";
             this.btnsiguiente.Size = new System.Drawing.Size(71, 28);
             this.btnsiguiente.TabIndex = 2;
@@ -274,7 +197,7 @@
             // 
             this.btnanterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnanterior.Location = new System.Drawing.Point(123, 6);
-            this.btnanterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnanterior.Margin = new System.Windows.Forms.Padding(2);
             this.btnanterior.Name = "btnanterior";
             this.btnanterior.Size = new System.Drawing.Size(71, 28);
             this.btnanterior.TabIndex = 1;
@@ -285,7 +208,7 @@
             // 
             this.btnprimero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnprimero.Location = new System.Drawing.Point(11, 6);
-            this.btnprimero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnprimero.Margin = new System.Windows.Forms.Padding(2);
             this.btnprimero.Name = "btnprimero";
             this.btnprimero.Size = new System.Drawing.Size(71, 28);
             this.btnprimero.TabIndex = 0;
@@ -303,7 +226,7 @@
             this.panel1.Controls.Add(this.btnnuevo);
             this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(105, 132);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(169, 371);
             this.panel1.TabIndex = 41;
@@ -314,7 +237,7 @@
             this.btnsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsalir.Location = new System.Drawing.Point(37, 262);
-            this.btnsalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(99, 75);
             this.btnsalir.TabIndex = 5;
@@ -324,69 +247,75 @@
             // 
             this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardar.Location = new System.Drawing.Point(37, 221);
-            this.btnguardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(92, 22);
             this.btnguardar.TabIndex = 4;
             this.btnguardar.Text = " Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // btnretiro
             // 
             this.btnretiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnretiro.Location = new System.Drawing.Point(37, 173);
-            this.btnretiro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnretiro.Margin = new System.Windows.Forms.Padding(2);
             this.btnretiro.Name = "btnretiro";
             this.btnretiro.Size = new System.Drawing.Size(92, 22);
             this.btnretiro.TabIndex = 3;
             this.btnretiro.Text = " Retiro ";
             this.btnretiro.UseVisualStyleBackColor = true;
+            this.btnretiro.Click += new System.EventHandler(this.btnretiro_Click);
             // 
             // btnmodificacion
             // 
             this.btnmodificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmodificacion.Location = new System.Drawing.Point(37, 124);
-            this.btnmodificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmodificacion.Margin = new System.Windows.Forms.Padding(2);
             this.btnmodificacion.Name = "btnmodificacion";
             this.btnmodificacion.Size = new System.Drawing.Size(92, 22);
             this.btnmodificacion.TabIndex = 2;
             this.btnmodificacion.Text = "Modificacion";
             this.btnmodificacion.UseVisualStyleBackColor = true;
+            this.btnmodificacion.Click += new System.EventHandler(this.btnmodificacion_Click);
             // 
             // btnconsulta
             // 
             this.btnconsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnconsulta.Location = new System.Drawing.Point(37, 70);
-            this.btnconsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnconsulta.Margin = new System.Windows.Forms.Padding(2);
             this.btnconsulta.Name = "btnconsulta";
             this.btnconsulta.Size = new System.Drawing.Size(92, 22);
             this.btnconsulta.TabIndex = 1;
             this.btnconsulta.Text = "Consulta";
             this.btnconsulta.UseVisualStyleBackColor = true;
+            this.btnconsulta.Click += new System.EventHandler(this.btnconsulta_Click);
             // 
             // btnnuevo
             // 
             this.btnnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnuevo.Location = new System.Drawing.Point(37, 23);
-            this.btnnuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnnuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnnuevo.Name = "btnnuevo";
             this.btnnuevo.Size = new System.Drawing.Size(92, 22);
             this.btnnuevo.TabIndex = 0;
             this.btnnuevo.Text = "Nuevo";
             this.btnnuevo.UseVisualStyleBackColor = true;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
             // frmmodificareserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(838, 514);
+            this.ClientSize = new System.Drawing.Size(913, 514);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmmodificareserva";
             this.Text = "frmmodificareserva";
+            this.Load += new System.EventHandler(this.frmmodificareserva_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -398,15 +327,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtdestino;
+        private System.Windows.Forms.TextBox txtorigen;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtfechavuelo;
+        private System.Windows.Forms.TextBox txtidreserva;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnultimo;
@@ -420,9 +347,5 @@
         private System.Windows.Forms.Button btnmodificacion;
         private System.Windows.Forms.Button btnconsulta;
         private System.Windows.Forms.Button btnnuevo;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
     }
 }

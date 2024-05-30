@@ -1,4 +1,5 @@
-﻿using System;
+﻿using skyedge.formularios.admin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -95,6 +96,20 @@ namespace skyedge.formularios
         {
             abrirpanel(new frmempleado());
             ocultarsubmenu();
+        }
+
+      
+
+        private void btnvueloida_Click(object sender, EventArgs e)
+        {
+            abrirpanel(new frmvueloida());
+            ocultarsubmenu();
+        }
+
+        private void btnvueloregreso_Click(object sender, EventArgs e)
+        {
+            abrirpanel(new frmvueloregreso());
+            ocultarsubmenu();  
         }
     }
 }
