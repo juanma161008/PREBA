@@ -30,13 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmvuelosdisponibles));
             this.dgvida = new System.Windows.Forms.DataGridView();
-            this.Elegir = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.origen_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.destino_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hora_salida_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hora_llegada_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvvuelta = new System.Windows.Forms.DataGridView();
@@ -45,6 +38,13 @@
             this.lblfida = new System.Windows.Forms.Label();
             this.lblregreso = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.Elegir = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.origen_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.destino_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hora_salida_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hora_llegada_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio_ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Elegir1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.origen_regreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.destino_regreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +74,94 @@
             this.dgvida.RowTemplate.Height = 24;
             this.dgvida.Size = new System.Drawing.Size(923, 166);
             this.dgvida.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Sans Serif Collection", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(306, 49);
+            this.label1.TabIndex = 2;
+            this.label1.Text = " Elige un vuelo de ida";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Sans Serif Collection", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(13, 399);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(347, 49);
+            this.label2.TabIndex = 3;
+            this.label2.Text = " Elige un vuelo de vuelta";
+            // 
+            // dgvvuelta
+            // 
+            this.dgvvuelta.BackgroundColor = System.Drawing.Color.MediumPurple;
+            this.dgvvuelta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvvuelta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Elegir1,
+            this.origen_regreso,
+            this.destino_regreso,
+            this.fecha_regreso,
+            this.hora_salida_regreso,
+            this.hora_llegada_regreso,
+            this.precio_regreso});
+            this.dgvvuelta.Location = new System.Drawing.Point(22, 467);
+            this.dgvvuelta.Name = "dgvvuelta";
+            this.dgvvuelta.RowHeadersWidth = 51;
+            this.dgvvuelta.RowTemplate.Height = 24;
+            this.dgvvuelta.Size = new System.Drawing.Size(929, 157);
+            this.dgvvuelta.TabIndex = 4;
+            // 
+            // btncontinuar
+            // 
+            this.btncontinuar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btncontinuar.Location = new System.Drawing.Point(981, 409);
+            this.btncontinuar.Name = "btncontinuar";
+            this.btncontinuar.Size = new System.Drawing.Size(168, 34);
+            this.btncontinuar.TabIndex = 5;
+            this.btncontinuar.Text = " CONTINUAR";
+            this.btncontinuar.UseVisualStyleBackColor = false;
+            this.btncontinuar.Click += new System.EventHandler(this.btncontinuar_Click);
+            // 
+            // lblpasajeros
+            // 
+            this.lblpasajeros.AutoSize = true;
+            this.lblpasajeros.Location = new System.Drawing.Point(552, 162);
+            this.lblpasajeros.Name = "lblpasajeros";
+            this.lblpasajeros.Size = new System.Drawing.Size(44, 16);
+            this.lblpasajeros.TabIndex = 6;
+            this.lblpasajeros.Text = "label3";
+            // 
+            // lblfida
+            // 
+            this.lblfida.AutoSize = true;
+            this.lblfida.Location = new System.Drawing.Point(625, 154);
+            this.lblfida.Name = "lblfida";
+            this.lblfida.Size = new System.Drawing.Size(44, 16);
+            this.lblfida.TabIndex = 7;
+            this.lblfida.Text = "label3";
+            // 
+            // lblregreso
+            // 
+            this.lblregreso.AutoSize = true;
+            this.lblregreso.Location = new System.Drawing.Point(695, 157);
+            this.lblregreso.Name = "lblregreso";
+            this.lblregreso.Size = new System.Drawing.Size(44, 16);
+            this.lblregreso.TabIndex = 8;
+            this.lblregreso.Text = "label3";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(765, 162);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(44, 16);
+            this.lblFecha.TabIndex = 9;
+            this.lblFecha.Text = "label3";
             // 
             // Elegir
             // 
@@ -125,94 +213,6 @@
             this.precio_ida.MinimumWidth = 6;
             this.precio_ida.Name = "precio_ida";
             this.precio_ida.Width = 125;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Sans Serif Collection", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 151);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(306, 49);
-            this.label1.TabIndex = 2;
-            this.label1.Text = " Elige un vuelo de ida";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Sans Serif Collection", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 399);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(347, 49);
-            this.label2.TabIndex = 3;
-            this.label2.Text = " Elige un vuelo de vuelta";
-            // 
-            // dgvvuelta
-            // 
-            this.dgvvuelta.BackgroundColor = System.Drawing.Color.MediumPurple;
-            this.dgvvuelta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvvuelta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Elegir1,
-            this.origen_regreso,
-            this.destino_regreso,
-            this.fecha_regreso,
-            this.hora_salida_regreso,
-            this.hora_llegada_regreso,
-            this.precio_regreso});
-            this.dgvvuelta.Location = new System.Drawing.Point(22, 468);
-            this.dgvvuelta.Name = "dgvvuelta";
-            this.dgvvuelta.RowHeadersWidth = 51;
-            this.dgvvuelta.RowTemplate.Height = 24;
-            this.dgvvuelta.Size = new System.Drawing.Size(929, 156);
-            this.dgvvuelta.TabIndex = 4;
-            // 
-            // btncontinuar
-            // 
-            this.btncontinuar.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btncontinuar.Location = new System.Drawing.Point(981, 409);
-            this.btncontinuar.Name = "btncontinuar";
-            this.btncontinuar.Size = new System.Drawing.Size(168, 34);
-            this.btncontinuar.TabIndex = 5;
-            this.btncontinuar.Text = " CONTINUAR";
-            this.btncontinuar.UseVisualStyleBackColor = false;
-            this.btncontinuar.Click += new System.EventHandler(this.btncontinuar_Click);
-            // 
-            // lblpasajeros
-            // 
-            this.lblpasajeros.AutoSize = true;
-            this.lblpasajeros.Location = new System.Drawing.Point(552, 162);
-            this.lblpasajeros.Name = "lblpasajeros";
-            this.lblpasajeros.Size = new System.Drawing.Size(44, 16);
-            this.lblpasajeros.TabIndex = 6;
-            this.lblpasajeros.Text = "label3";
-            // 
-            // lblfida
-            // 
-            this.lblfida.AutoSize = true;
-            this.lblfida.Location = new System.Drawing.Point(625, 154);
-            this.lblfida.Name = "lblfida";
-            this.lblfida.Size = new System.Drawing.Size(44, 16);
-            this.lblfida.TabIndex = 7;
-            this.lblfida.Text = "label3";
-            // 
-            // lblregreso
-            // 
-            this.lblregreso.AutoSize = true;
-            this.lblregreso.Location = new System.Drawing.Point(695, 157);
-            this.lblregreso.Name = "lblregreso";
-            this.lblregreso.Size = new System.Drawing.Size(44, 16);
-            this.lblregreso.TabIndex = 8;
-            this.lblregreso.Text = "label3";
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(765, 162);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(44, 16);
-            this.lblFecha.TabIndex = 9;
-            this.lblFecha.Text = "label3";
             // 
             // Elegir1
             // 
@@ -301,7 +301,7 @@
         public System.Windows.Forms.Label lblfida;
         public System.Windows.Forms.Label lblregreso;
         public System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Elegir;
+        private System.Windows.Forms.DataGridViewButtonColumn Elegir;
         private System.Windows.Forms.DataGridViewTextBoxColumn origen_ida;
         private System.Windows.Forms.DataGridViewTextBoxColumn destino_ida;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_ida;
