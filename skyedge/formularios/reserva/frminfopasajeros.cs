@@ -16,6 +16,8 @@ namespace skyedge.formularios
         public frminfopasajeros()
         {
             InitializeComponent();
+            LlenarDataGridViewVuelosIda();
+            LlenarDataGridViewVuelosRegreso();
         }
 
         public frminfopasajeros(List<DataGridViewRow> filasIdaSeleccionadas, List<DataGridViewRow> filasVueltaSeleccionadas)
@@ -23,6 +25,8 @@ namespace skyedge.formularios
             InitializeComponent();
             LlenarDataGridViewReservaIda(filasIdaSeleccionadas);
             LlenarDataGridViewReservaVuelta(filasVueltaSeleccionadas);
+            LlenarDataGridViewVuelosIda();
+            LlenarDataGridViewVuelosRegreso();
         }
 
         private void LlenarDataGridViewReservaIda(List<DataGridViewRow> filasIdaSeleccionadas)
@@ -38,6 +42,30 @@ namespace skyedge.formularios
             foreach (DataGridViewRow fila in filasVueltaSeleccionadas)
             {
                 dgvvuelta.Rows.Add(fila.Cells.Cast<DataGridViewCell>().Select(cell => cell.Value).ToArray());
+            }
+        }
+
+        private void LlenarDataGridViewVuelosIda()
+        {
+            string query = "SELECT * FROM tblVuelosIda";
+            LlenarDataGridViewConConsulta(dgvida, query);
+        }
+
+        private void LlenarDataGridViewVuelosRegreso()
+        {
+            string query = "SELECT * FROM tblVuelosRegreso";
+            LlenarDataGridViewConConsulta(dgvvuelta, query);
+        }
+
+        private void LlenarDataGridViewConConsulta(DataGridView dgv, string query)
+        {
+            Cconexion conexionDB = new Cconexion();
+            using (SqlConnection connection = conexionDB.AbrirConexion())
+            {
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
+                System.Data.DataTable dataTable = new System.Data.DataTable();
+                dataAdapter.Fill(dataTable);
+                dgv.DataSource = dataTable;
             }
         }
 
@@ -112,7 +140,6 @@ namespace skyedge.formularios
             ObjDoc.Activate();
 
             string logoPath = @"C:\Users\JUAN MANUEL CARDENAS\source\repos\skyedge1\skyedge\LOGO 1 .png"; // Cambia esta ruta a la ubicación real de tu logo
-            
 
             try
             {
@@ -171,7 +198,6 @@ namespace skyedge.formularios
                 ObjWord.Selection.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter;
                 ObjWord.Selection.TypeText("Pagar");
 
-                 
                 ObjWord.Visible = true;
             }
             catch (System.Runtime.InteropServices.COMException ex)
@@ -220,6 +246,5 @@ namespace skyedge.formularios
             table.Range.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter;
             table.Range.Font.Size = 12;
         }
-
     }
 }

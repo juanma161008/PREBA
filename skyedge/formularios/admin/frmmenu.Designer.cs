@@ -33,8 +33,9 @@
             this.panelsuperior = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelempleado = new System.Windows.Forms.Panel();
+            this.btnvueloregreso = new System.Windows.Forms.Button();
+            this.btnvueloida = new System.Windows.Forms.Button();
             this.btnempleado = new System.Windows.Forms.Button();
-            this.btnvuelo = new System.Windows.Forms.Button();
             this.btnnomina = new System.Windows.Forms.Button();
             this.btnempleados = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -83,8 +84,9 @@
             // 
             // panelempleado
             // 
+            this.panelempleado.Controls.Add(this.btnvueloregreso);
+            this.panelempleado.Controls.Add(this.btnvueloida);
             this.panelempleado.Controls.Add(this.btnempleado);
-            this.panelempleado.Controls.Add(this.btnvuelo);
             this.panelempleado.Controls.Add(this.btnnomina);
             this.panelempleado.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelempleado.Location = new System.Drawing.Point(0, 38);
@@ -92,33 +94,47 @@
             this.panelempleado.Size = new System.Drawing.Size(458, 91);
             this.panelempleado.TabIndex = 1;
             // 
+            // btnvueloregreso
+            // 
+            this.btnvueloregreso.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btnvueloregreso.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnvueloregreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvueloregreso.ForeColor = System.Drawing.Color.White;
+            this.btnvueloregreso.Location = new System.Drawing.Point(248, 62);
+            this.btnvueloregreso.Name = "btnvueloregreso";
+            this.btnvueloregreso.Size = new System.Drawing.Size(210, 28);
+            this.btnvueloregreso.TabIndex = 4;
+            this.btnvueloregreso.Text = "vuelos regreso";
+            this.btnvueloregreso.UseVisualStyleBackColor = false;
+            this.btnvueloregreso.Click += new System.EventHandler(this.btnvueloregreso_Click);
+            // 
+            // btnvueloida
+            // 
+            this.btnvueloida.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btnvueloida.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnvueloida.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvueloida.ForeColor = System.Drawing.Color.White;
+            this.btnvueloida.Location = new System.Drawing.Point(0, 62);
+            this.btnvueloida.Name = "btnvueloida";
+            this.btnvueloida.Size = new System.Drawing.Size(248, 29);
+            this.btnvueloida.TabIndex = 3;
+            this.btnvueloida.Text = "vuelo ida";
+            this.btnvueloida.UseVisualStyleBackColor = false;
+            this.btnvueloida.Click += new System.EventHandler(this.btnvueloida_Click);
+            // 
             // btnempleado
             // 
             this.btnempleado.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnempleado.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnempleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnempleado.ForeColor = System.Drawing.Color.White;
-            this.btnempleado.Location = new System.Drawing.Point(0, 63);
+            this.btnempleado.Location = new System.Drawing.Point(0, 31);
             this.btnempleado.Name = "btnempleado";
             this.btnempleado.Size = new System.Drawing.Size(458, 31);
             this.btnempleado.TabIndex = 2;
             this.btnempleado.Text = "Empleados";
             this.btnempleado.UseVisualStyleBackColor = false;
             this.btnempleado.Click += new System.EventHandler(this.btnempleado_Click);
-            // 
-            // btnvuelo
-            // 
-            this.btnvuelo.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnvuelo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnvuelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnvuelo.ForeColor = System.Drawing.Color.White;
-            this.btnvuelo.Location = new System.Drawing.Point(0, 31);
-            this.btnvuelo.Name = "btnvuelo";
-            this.btnvuelo.Size = new System.Drawing.Size(458, 32);
-            this.btnvuelo.TabIndex = 1;
-            this.btnvuelo.Text = "Vuelos";
-            this.btnvuelo.UseVisualStyleBackColor = false;
-            this.btnvuelo.Click += new System.EventHandler(this.btnvuelo_Click);
             // 
             // btnnomina
             // 
@@ -252,8 +268,9 @@
         private System.Windows.Forms.Button btncliente;
         private System.Windows.Forms.Panel panelempleado;
         private System.Windows.Forms.Button btnempleado;
-        private System.Windows.Forms.Button btnvuelo;
         private System.Windows.Forms.Button btnnomina;
         private System.Windows.Forms.Button btnempleados;
+        private System.Windows.Forms.Button btnvueloregreso;
+        private System.Windows.Forms.Button btnvueloida;
     }
 }
