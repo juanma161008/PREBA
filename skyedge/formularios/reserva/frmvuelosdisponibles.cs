@@ -1,5 +1,6 @@
 ﻿using skyedge.clases;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -43,7 +44,7 @@ namespace skyedge.formularios
 
                 if (dt.Rows.Count > 0)
                 {
-                    dgvida.Rows.Clear(); 
+                    dgvida.Rows.Clear(); // Limpiar cualquier fila existente
                     foreach (DataRow row in dt.Rows)
                     {
                         dgvida.Rows.Add(
@@ -78,7 +79,7 @@ namespace skyedge.formularios
                     foreach (DataRow row in dt.Rows)
                     {
                         dgvvuelta.Rows.Add(
-                            false, 
+                            false, // Valor booleano para el checkbox
                             row["origen_regreso"].ToString(),
                             row["destino_regreso"].ToString(),
                             Convert.ToDateTime(row["fecha_regreso"]).ToString("dd/MM/yyyy"),
@@ -93,26 +94,55 @@ namespace skyedge.formularios
 
         private void frmvuelosdisponibles_Load(object sender, EventArgs e)
         {
-            if (fechaSalida != DateTime.MinValue)
+            LlenarDataGridViewIda();
+            LlenarDataGridViewVuelta();
+ 
+        }
+        private List<DataRow> ObtenerFilasSeleccionadasIda()
+        {
+            List<DataRow> filasSeleccionadas = new List<DataRow>();
+            foreach (DataGridViewRow fila in dgvida.Rows)
             {
-                LlenarDataGridViewIda();
+                if (fila.DataBoundItem != null && fila.Cells[0].Value != null && (bool)fila.Cells[0].Value) // Verificar si el DataBoundItem y el checkbox están seleccionados
+                {
+                    DataRowView filaView = fila.DataBoundItem as DataRowView;
+                    if (filaView != null)
+                    {
+                        filasSeleccionadas.Add(filaView.Row);
+                    }
+                }
             }
-
-            if (fechaRegreso.HasValue)
-            {
-                LlenarDataGridViewVuelta();
-            }
+            return filasSeleccionadas;
         }
 
-
-
+        private List<DataRow> ObtenerFilasSeleccionadasVuelta()
+        {
+            List<DataRow> filasSeleccionadas = new List<DataRow>();
+            foreach (DataGridViewRow fila in dgvvuelta.Rows)
+            {
+                if (fila.DataBoundItem != null && fila.Cells[0].Value != null && (bool)fila.Cells[0].Value) // Verificar si el DataBoundItem y el checkbox están seleccionados
+                {
+                    DataRowView filaView = fila.DataBoundItem as DataRowView;
+                    if (filaView != null)
+                    {
+                        filasSeleccionadas.Add(filaView.Row);
+                    }
+                }
+            }
+            return filasSeleccionadas;
+        }
         private void btncontinuar_Click(object sender, EventArgs e)
         {
-            frminfopasajeros frmA = new frminfopasajeros();
+            List<DataRow> filasIdaSeleccionadas = ObtenerFilasSeleccionadasIda();
+            List<DataRow> filasVueltaSeleccionadas = ObtenerFilasSeleccionadasVuelta();
+
+            frminfopasajeros frmA = new frminfopasajeros(filasIdaSeleccionadas, filasVueltaSeleccionadas);
             frmA.dgvinfopasajeros.Rows.Add(Int32.Parse(lblpasajeros.Text));
             frmA.Show();
         }
+        private void dgvvuelta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-       
+        }
     }
 }
