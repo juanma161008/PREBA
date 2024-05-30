@@ -43,20 +43,16 @@ namespace skyedge.formularios
 
         private void frminfopasajeros_Load(object sender, EventArgs e)
         {
-            // No es necesario llamar a los métodos de llenado aquí ya que se llaman en el constructor.
         }
 
         private void GuardarDatosEnBD(DataGridView dgv)
         {
-            // Establecer la conexión con la base de datos
             Cconexion conexionDB = new Cconexion();
             using (SqlConnection connection = conexionDB.AbrirConexion())
             {
-                // Definir la consulta SQL para la inserción
                 string query = "INSERT INTO tblPasajero (Cedula, Nombre, Apellido, Telefono, fecha_nacimineto, Direccion) " +
                                "VALUES (@Cedula, @Nombre, @Apellido, @Telefono, @FechaNacimiento, @Direccion)";
 
-                // Crear el comando SQL
                 SqlCommand cmd = new SqlCommand(query, connection);
 
                 // Recorrer las filas del DataGridView
@@ -68,7 +64,7 @@ namespace skyedge.formularios
                         fila.Cells[5].Value != null)
                     {
                         // Agregar parámetros
-                        cmd.Parameters.Clear(); // Limpiar parámetros anteriores
+                        cmd.Parameters.Clear(); 
                         cmd.Parameters.AddWithValue("@Cedula", fila.Cells[0].Value.ToString());
                         cmd.Parameters.AddWithValue("@Nombre", fila.Cells[1].Value.ToString());
                         cmd.Parameters.AddWithValue("@Apellido", fila.Cells[2].Value.ToString());
@@ -76,12 +72,10 @@ namespace skyedge.formularios
                         cmd.Parameters.AddWithValue("@FechaNacimiento", fila.Cells[4].Value.ToString());
                         cmd.Parameters.AddWithValue("@Direccion", fila.Cells[5].Value.ToString());
 
-                        // Ejecutar la consulta
                         cmd.ExecuteNonQuery();
                     }
                 }
 
-                // Mostrar mensaje de éxito
                 MessageBox.Show("Datos guardados en la base de datos.");
             }
         }
@@ -111,20 +105,12 @@ namespace skyedge.formularios
             Word.Document ObjDoc = ObjWord.Documents.Add(ref ObjMiss);
             ObjDoc.Activate();
 
-            string logoPath = @"C:\Users\JUAN MANUEL CARDENAS\source\repos\skyedge1\skyedge\LOGO 1 .png"; // Cambia esta ruta a la ubicación real de tu logo
+
             
 
             try
             {
-                // Insertar el logo en la parte superior del documento
-                ObjWord.Selection.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter;
-                ObjWord.Selection.InlineShapes.AddPicture(logoPath, ref ObjMiss, ref ObjMiss, ref ObjMiss).Select();
-                Word.InlineShape logo = ObjWord.Selection.InlineShapes[1];
-                logo.Width = 200; // Ajusta el tamaño del logo
-                logo.Height = 200;
-
-                // Salto de línea después del logo
-                ObjWord.Selection.TypeParagraph();
+               
 
                 // Título de información de los pasajeros
                 ObjWord.Selection.Font.Color = Word.WdColor.wdColorBlueGray;

@@ -20,7 +20,7 @@ namespace skyedge
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmreportes());
+            Application.Run(new frmreserva());
         }
     }
 }
