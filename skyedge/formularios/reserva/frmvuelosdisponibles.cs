@@ -73,7 +73,7 @@ namespace skyedge.formularios
 
                     if (dt.Rows.Count > 0)
                     {
-                        dgvvuelta.Rows.Clear(); 
+                        dgvvuelta.Rows.Clear();
                         foreach (DataRow row in dt.Rows)
                         {
                             dgvvuelta.Rows.Add(
