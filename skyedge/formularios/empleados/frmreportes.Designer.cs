@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmreportes));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtnombre = new System.Windows.Forms.TextBox();
-            this.textnombre = new System.Windows.Forms.TextBox();
-            this.txtapellido = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtapellido = new System.Windows.Forms.TextBox();
+            this.textnombre = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnconsultar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btnconsultar);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -55,49 +57,15 @@
             this.panel1.Size = new System.Drawing.Size(691, 224);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(85, 114);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Consulta Liquidación";
-            // 
-            // txtnombre
-            // 
-            this.txtnombre.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
-            this.txtnombre.Location = new System.Drawing.Point(162, 33);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(332, 30);
-            this.txtnombre.TabIndex = 3;
-            // 
-            // textnombre
-            // 
-            this.textnombre.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
-            this.textnombre.Location = new System.Drawing.Point(162, 97);
-            this.textnombre.Name = "textnombre";
-            this.textnombre.Size = new System.Drawing.Size(332, 30);
-            this.textnombre.TabIndex = 4;
-            // 
-            // txtapellido
-            // 
-            this.txtapellido.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
-            this.txtapellido.Location = new System.Drawing.Point(162, 164);
-            this.txtapellido.Name = "txtapellido";
-            this.txtapellido.Size = new System.Drawing.Size(332, 30);
-            this.txtapellido.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(41, 166);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Cedula";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(47, 99);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Apellidos ";
             // 
             // label3
             // 
@@ -109,15 +77,60 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Nombre";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(47, 99);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Apellidos ";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(41, 166);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Cedula";
+            // 
+            // txtapellido
+            // 
+            this.txtapellido.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
+            this.txtapellido.Location = new System.Drawing.Point(162, 164);
+            this.txtapellido.Name = "txtapellido";
+            this.txtapellido.Size = new System.Drawing.Size(332, 30);
+            this.txtapellido.TabIndex = 5;
+            // 
+            // textnombre
+            // 
+            this.textnombre.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
+            this.textnombre.Location = new System.Drawing.Point(162, 97);
+            this.textnombre.Name = "textnombre";
+            this.textnombre.Size = new System.Drawing.Size(332, 30);
+            this.textnombre.TabIndex = 4;
+            // 
+            // txtnombre
+            // 
+            this.txtnombre.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
+            this.txtnombre.Location = new System.Drawing.Point(162, 33);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(332, 30);
+            this.txtnombre.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(85, 114);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Consulta Reportes";
+            // 
+            // btnconsultar
+            // 
+            this.btnconsultar.BackColor = System.Drawing.Color.IndianRed;
+            this.btnconsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnconsultar.Location = new System.Drawing.Point(555, 89);
+            this.btnconsultar.Name = "btnconsultar";
+            this.btnconsultar.Size = new System.Drawing.Size(86, 42);
+            this.btnconsultar.TabIndex = 9;
+            this.btnconsultar.Text = "Consultar";
+            this.btnconsultar.UseVisualStyleBackColor = false;
             // 
             // frmreportes
             // 
@@ -130,7 +143,6 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Name = "frmreportes";
-            this.Text = "frmreportes";
             this.Load += new System.EventHandler(this.frmreportes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -149,5 +161,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnconsultar;
     }
 }
