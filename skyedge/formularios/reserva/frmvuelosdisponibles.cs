@@ -41,7 +41,7 @@ namespace skyedge.formularios
 
                 if (dt.Rows.Count > 0)
                 {
-                    dgvida.Rows.Clear(); // Limpiar cualquier fila existente
+                    dgvida.Rows.Clear(); 
                     foreach (DataRow row in dt.Rows)
                     {
                         dgvida.Rows.Add(
@@ -76,7 +76,7 @@ namespace skyedge.formularios
                     foreach (DataRow row in dt.Rows)
                     {
                         dgvvuelta.Rows.Add(
-                            false, // Valor booleano para el checkbox
+                            false, 
                             row["origen_regreso"].ToString(),
                             row["destino_regreso"].ToString(),
                             Convert.ToDateTime(row["fecha_regreso"]).ToString("dd/MM/yyyy"),
@@ -91,10 +91,18 @@ namespace skyedge.formularios
 
         private void frmvuelosdisponibles_Load(object sender, EventArgs e)
         {
-            LlenarDataGridViewIda();
-            LlenarDataGridViewVuelta();
- 
+            if (fechaSalida != DateTime.MinValue)
+            {
+                LlenarDataGridViewIda();
+            }
+
+            if (fechaRegreso.HasValue)
+            {
+                LlenarDataGridViewVuelta();
+            }
         }
+
+
 
         private void btncontinuar_Click(object sender, EventArgs e)
         {
@@ -103,9 +111,6 @@ namespace skyedge.formularios
             frmA.Show();
         }
 
-        private void dgvvuelta_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
     }
 }
