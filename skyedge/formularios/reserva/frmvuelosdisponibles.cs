@@ -35,7 +35,6 @@ namespace skyedge.formularios
             using (SqlConnection connection = conexionDB.AbrirConexion())
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM tblVuelosIda", connection);
-
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -46,17 +45,19 @@ namespace skyedge.formularios
                     foreach (DataRow row in dt.Rows)
                     {
                         dgvida.Rows.Add(
-                            row["origen_ida"],
-                            row["destino_ida"],
+                            false, // Esto agrega el CheckBox sin marcar
+                            row["origen_ida"].ToString(),
+                            row["destino_ida"].ToString(),
                             Convert.ToDateTime(row["fecha_ida"]).ToString("dd/MM/yyyy"),
-                            row["hora_salida_ida"],
-                            row["hora_llegada_ida"],
+                            row["hora_salida_ida"].ToString(),
+                            row["hora_llegada_ida"].ToString(),
                             Convert.ToDecimal(row["precio_ida"]).ToString("0.00")
                         );
                     }
                 }
             }
         }
+
 
         private void LlenarDataGridViewVuelta()
         {
