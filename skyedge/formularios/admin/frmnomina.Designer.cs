@@ -398,7 +398,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1102, 711);
+            this.ClientSize = new System.Drawing.Size(1107, 572);
             this.Controls.Add(this.comboBoxFecha);
             this.Controls.Add(this.Fecha);
             this.Controls.Add(this.txthoras);
