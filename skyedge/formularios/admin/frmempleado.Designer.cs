@@ -69,7 +69,7 @@
             this.panel2.Controls.Add(this.btnanterior);
             this.panel2.Controls.Add(this.btnprimero);
             this.panel2.Location = new System.Drawing.Point(185, 463);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(458, 37);
             this.panel2.TabIndex = 39;
@@ -78,7 +78,7 @@
             // 
             this.btnultimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnultimo.Location = new System.Drawing.Point(358, 6);
-            this.btnultimo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnultimo.Margin = new System.Windows.Forms.Padding(2);
             this.btnultimo.Name = "btnultimo";
             this.btnultimo.Size = new System.Drawing.Size(76, 27);
             this.btnultimo.TabIndex = 3;
@@ -90,7 +90,7 @@
             // 
             this.btnsiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsiguiente.Location = new System.Drawing.Point(254, 6);
-            this.btnsiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.btnsiguiente.Name = "btnsiguiente";
             this.btnsiguiente.Size = new System.Drawing.Size(76, 27);
             this.btnsiguiente.TabIndex = 2;
@@ -102,7 +102,7 @@
             // 
             this.btnanterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnanterior.Location = new System.Drawing.Point(131, 6);
-            this.btnanterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnanterior.Margin = new System.Windows.Forms.Padding(2);
             this.btnanterior.Name = "btnanterior";
             this.btnanterior.Size = new System.Drawing.Size(76, 27);
             this.btnanterior.TabIndex = 1;
@@ -114,7 +114,7 @@
             // 
             this.btnprimero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnprimero.Location = new System.Drawing.Point(12, 6);
-            this.btnprimero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnprimero.Margin = new System.Windows.Forms.Padding(2);
             this.btnprimero.Name = "btnprimero";
             this.btnprimero.Size = new System.Drawing.Size(76, 27);
             this.btnprimero.TabIndex = 0;
@@ -133,7 +133,7 @@
             this.panel1.Controls.Add(this.btnnuevo);
             this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(829, 135);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(180, 351);
             this.panel1.TabIndex = 38;
@@ -144,7 +144,7 @@
             this.btnsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsalir.Location = new System.Drawing.Point(39, 258);
-            this.btnsalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(106, 74);
             this.btnsalir.TabIndex = 5;
@@ -154,7 +154,7 @@
             // 
             this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardar.Location = new System.Drawing.Point(39, 218);
-            this.btnguardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(98, 22);
             this.btnguardar.TabIndex = 4;
@@ -166,7 +166,7 @@
             // 
             this.btnretiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnretiro.Location = new System.Drawing.Point(39, 170);
-            this.btnretiro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnretiro.Margin = new System.Windows.Forms.Padding(2);
             this.btnretiro.Name = "btnretiro";
             this.btnretiro.Size = new System.Drawing.Size(98, 22);
             this.btnretiro.TabIndex = 3;
@@ -178,7 +178,7 @@
             // 
             this.btnmodificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmodificacion.Location = new System.Drawing.Point(39, 122);
-            this.btnmodificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmodificacion.Margin = new System.Windows.Forms.Padding(2);
             this.btnmodificacion.Name = "btnmodificacion";
             this.btnmodificacion.Size = new System.Drawing.Size(98, 22);
             this.btnmodificacion.TabIndex = 2;
@@ -190,7 +190,7 @@
             // 
             this.btnconsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnconsulta.Location = new System.Drawing.Point(39, 69);
-            this.btnconsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnconsulta.Margin = new System.Windows.Forms.Padding(2);
             this.btnconsulta.Name = "btnconsulta";
             this.btnconsulta.Size = new System.Drawing.Size(98, 22);
             this.btnconsulta.TabIndex = 1;
@@ -202,7 +202,7 @@
             // 
             this.btnnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnuevo.Location = new System.Drawing.Point(39, 22);
-            this.btnnuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnnuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnnuevo.Name = "btnnuevo";
             this.btnnuevo.Size = new System.Drawing.Size(98, 22);
             this.btnnuevo.TabIndex = 0;
@@ -228,7 +228,7 @@
             this.panel3.Controls.Add(this.txtcedula);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(185, 135);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(458, 312);
             this.panel3.TabIndex = 40;
@@ -237,7 +237,7 @@
             // 
             this.txtsalario.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
             this.txtsalario.Location = new System.Drawing.Point(163, 271);
-            this.txtsalario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtsalario.Margin = new System.Windows.Forms.Padding(2);
             this.txtsalario.Name = "txtsalario";
             this.txtsalario.Size = new System.Drawing.Size(247, 30);
             this.txtsalario.TabIndex = 13;
@@ -259,7 +259,7 @@
             // 
             this.txtcargo.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
             this.txtcargo.Location = new System.Drawing.Point(164, 227);
-            this.txtcargo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcargo.Margin = new System.Windows.Forms.Padding(2);
             this.txtcargo.Name = "txtcargo";
             this.txtcargo.Size = new System.Drawing.Size(247, 30);
             this.txtcargo.TabIndex = 11;
@@ -280,7 +280,7 @@
             // 
             this.txtdireccion.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
             this.txtdireccion.Location = new System.Drawing.Point(163, 190);
-            this.txtdireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtdireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(248, 30);
             this.txtdireccion.TabIndex = 9;
@@ -289,7 +289,7 @@
             // 
             this.txtemail.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
             this.txtemail.Location = new System.Drawing.Point(164, 151);
-            this.txtemail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtemail.Margin = new System.Windows.Forms.Padding(2);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(247, 30);
             this.txtemail.TabIndex = 8;
@@ -335,7 +335,7 @@
             // 
             this.txtapellido.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
             this.txtapellido.Location = new System.Drawing.Point(165, 108);
-            this.txtapellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtapellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(247, 30);
             this.txtapellido.TabIndex = 7;
@@ -356,7 +356,7 @@
             // 
             this.txtnombre.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
             this.txtnombre.Location = new System.Drawing.Point(164, 59);
-            this.txtnombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(248, 30);
             this.txtnombre.TabIndex = 6;
@@ -366,7 +366,7 @@
             this.txtcedula.BackColor = System.Drawing.Color.White;
             this.txtcedula.Font = new System.Drawing.Font("Sans Serif Collection", 7F);
             this.txtcedula.Location = new System.Drawing.Point(164, 10);
-            this.txtcedula.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcedula.Margin = new System.Windows.Forms.Padding(2);
             this.txtcedula.Name = "txtcedula";
             this.txtcedula.Size = new System.Drawing.Size(248, 30);
             this.txtcedula.TabIndex = 5;
@@ -393,7 +393,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmempleado";
             this.Text = "frmempleado";
             this.Load += new System.EventHandler(this.frmempleado_Load);

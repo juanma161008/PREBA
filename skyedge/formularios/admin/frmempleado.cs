@@ -180,10 +180,10 @@ namespace skyedge.formularios
             txtcedula.Text = dt.Rows[i][0].ToString();
             txtnombre.Text = dt.Rows[i][1].ToString();
             txtapellido.Text = dt.Rows[i][2].ToString();
-            txtemail.Text = dt.Rows[i][3].ToString();
-            txtdireccion.Text = dt.Rows[i][4].ToString();
-            txtcargo.Text = dt.Rows[i][5].ToString();
-            txtsalario.Text = dt.Rows[i][6].ToString();
+            txtemail.Text = dt.Rows[i][5].ToString();
+            txtdireccion.Text = dt.Rows[i][6].ToString();
+            txtcargo.Text = dt.Rows[i][7].ToString();
+            txtsalario.Text = dt.Rows[i][8].ToString();
             contador = dt.Rows.Count;
         }
         void limpiar()
@@ -197,6 +197,9 @@ namespace skyedge.formularios
             txtsalario.Clear();
            
         }
+
+       
+
         void habilita()
         {
             txtcedula.Enabled = true;

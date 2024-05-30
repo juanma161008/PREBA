@@ -35,7 +35,6 @@ namespace skyedge.formularios
             using (SqlConnection connection = conexionDB.AbrirConexion())
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM tblVuelosIda", connection);
-
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -46,11 +45,12 @@ namespace skyedge.formularios
                     foreach (DataRow row in dt.Rows)
                     {
                         dgvida.Rows.Add(
-                            row["origen_ida"],
-                            row["destino_ida"],
+                            false, 
+                            row["origen_ida"].ToString(),
+                            row["destino_ida"].ToString(),
                             Convert.ToDateTime(row["fecha_ida"]).ToString("dd/MM/yyyy"),
-                            row["hora_salida_ida"],
-                            row["hora_llegada_ida"],
+                            row["hora_salida_ida"].ToString(),
+                            row["hora_llegada_ida"].ToString(),
                             Convert.ToDecimal(row["precio_ida"]).ToString("0.00")
                         );
                     }
@@ -58,54 +58,42 @@ namespace skyedge.formularios
             }
         }
 
+
         private void LlenarDataGridViewVuelta()
         {
-            try
+            Cconexion conexionDB = new Cconexion();
+            using (SqlConnection connection = conexionDB.AbrirConexion())
             {
-                Cconexion conexionDB = new Cconexion();
-                using (SqlConnection connection = conexionDB.AbrirConexion())
+                SqlCommand cmd = new SqlCommand("SELECT * FROM tblVuelosRegreso", connection);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
                 {
-                    SqlCommand cmd = new SqlCommand("SELECT [origen_regreso], [destino_regreso], [fecha_regreso], [hora_salida_regreso], [hora_llegada_regreso], [precio_regreso] FROM tblVuelosRegreso", connection);
-
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-
-                    if (dt.Rows.Count > 0)
+                    dgvvuelta.Rows.Clear();
+                    foreach (DataRow row in dt.Rows)
                     {
-                        dgvvuelta.Rows.Clear();
-                        foreach (DataRow row in dt.Rows)
-                        {
-                            dgvvuelta.Rows.Add(
-                                row["origen_regreso"].ToString(),
-                                row["destino_regreso"].ToString(),
-                                Convert.ToDateTime(row["fecha_regreso"]).ToString("dd/MM/yyyy"),
-                                row["hora_salida_regreso"].ToString(),
-                                row["hora_llegada_regreso"].ToString(),
-                                Convert.ToDecimal(row["precio_regreso"]).ToString("0.00")
-                            );
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se encontraron datos en la tabla tblVuelosRegreso", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dgvvuelta.Rows.Add(
+                            false, // Valor booleano para el checkbox
+                            row["origen_regreso"].ToString(),
+                            row["destino_regreso"].ToString(),
+                            Convert.ToDateTime(row["fecha_regreso"]).ToString("dd/MM/yyyy"),
+                            row["hora_salida_regreso"].ToString(),
+                            row["hora_llegada_regreso"].ToString(),
+                            Convert.ToDecimal(row["precio_regreso"]).ToString("0.00")
+                        );
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al llenar el DataGridView: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
-
 
         private void frmvuelosdisponibles_Load(object sender, EventArgs e)
         {
             LlenarDataGridViewIda();
-            if (fechaRegreso.HasValue)
-            {
-                LlenarDataGridViewVuelta();
-            }
+            LlenarDataGridViewVuelta();
+ 
         }
 
         private void btncontinuar_Click(object sender, EventArgs e)
@@ -113,6 +101,11 @@ namespace skyedge.formularios
             frminfopasajeros frmA = new frminfopasajeros();
             frmA.dgvinfopasajeros.Rows.Add(Int32.Parse(lblpasajeros.Text));
             frmA.Show();
+        }
+
+        private void dgvvuelta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
