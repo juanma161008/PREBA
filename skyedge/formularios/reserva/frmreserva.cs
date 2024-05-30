@@ -17,10 +17,19 @@ namespace skyedge.formularios
             InitializeComponent();
             cn = new Cconexion();
             cargarciudad();
+
+            dtpida.Format = DateTimePickerFormat.Custom;
+            dtpida.CustomFormat = "yyyy-MM-dd";
+            dtpida.ShowCheckBox = true;
+
+            dtpvuelta.Format = DateTimePickerFormat.Custom;
+            dtpvuelta.CustomFormat = "yyyy-MM-dd";
+            dtpvuelta.ShowCheckBox = true;
         }
+
         void cargarciudad()
         {
-            SqlCommand cmd = new SqlCommand("select nombre_ciudad from tblciudad",cn.AbrirConexion());
+            SqlCommand cmd = new SqlCommand("select nombre_ciudad from tblciudad", cn.AbrirConexion());
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -30,39 +39,54 @@ namespace skyedge.formularios
                 cmbdestino.Items.Add(dt.Rows[i][0].ToString());
             }
         }
+
         private void frmreserva_Load(object sender, EventArgs e)
         {
         }
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
-            frmvuelosdisponibles frmA = new frmvuelosdisponibles();
+            if (string.IsNullOrWhiteSpace(cmborigen.Text) || string.IsNullOrWhiteSpace(cmbdestino.Text))
+            {
+                MessageBox.Show("Por favor, seleccione el origen y el destino.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!dtpida.Checked)
+            {
+                MessageBox.Show("Por favor, seleccione una fecha de ida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string direccion = cmbdireccion.Text;
+            string origen = cmborigen.Text;
+            string destino = cmbdestino.Text;
+            DateTime fechaSalida = dtpida.Value;
+            DateTime? fechaRegreso = dtpvuelta.Checked ? (DateTime?)dtpvuelta.Value : null;
+
+            frmvuelosdisponibles frmA = new frmvuelosdisponibles(direccion, origen, destino, fechaSalida, fechaRegreso);
             frmA.lblpasajeros.Text = txtpasajeros.Text;
-            frmA.lblfida.Text = cmborigen.Text;
-            frmA.lblregreso.Text = cmbdestino.Text;
-            frmA.lblFecha.Text = dtpida.Text;
             frmA.Show();
         }
-    
 
-        private void label4_Click(object sender, EventArgs e)
+        private void cmbdireccion_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void frmreserva_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbpasajeros_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            switch (cmbdireccion.SelectedItem.ToString())
+            {
+                case "Ida y Vuelta":
+                    dtpida.Enabled = true;
+                    dtpvuelta.Enabled = true;
+                    break;
+                case "Ida":
+                    dtpida.Enabled = true;
+                    dtpvuelta.Enabled = false;
+                    dtpvuelta.Checked = false;
+                    break;
+                default:
+                    dtpida.Enabled = true;
+                    dtpvuelta.Enabled = true;
+                    break;
+            }
         }
     }
 }

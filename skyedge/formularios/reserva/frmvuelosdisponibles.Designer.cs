@@ -241,6 +241,7 @@
             this.lblpasajeros.Size = new System.Drawing.Size(44, 16);
             this.lblpasajeros.TabIndex = 6;
             this.lblpasajeros.Text = "label3";
+            this.lblpasajeros.Visible = false;
             // 
             // lblfida
             // 
@@ -250,6 +251,7 @@
             this.lblfida.Size = new System.Drawing.Size(44, 16);
             this.lblfida.TabIndex = 7;
             this.lblfida.Text = "label3";
+            this.lblfida.Visible = false;
             // 
             // lblregreso
             // 
@@ -259,6 +261,7 @@
             this.lblregreso.Size = new System.Drawing.Size(44, 16);
             this.lblregreso.TabIndex = 8;
             this.lblregreso.Text = "label3";
+            this.lblregreso.Visible = false;
             // 
             // lblFecha
             // 
@@ -268,6 +271,7 @@
             this.lblFecha.Size = new System.Drawing.Size(44, 16);
             this.lblFecha.TabIndex = 9;
             this.lblFecha.Text = "label3";
+            this.lblFecha.Visible = false;
             // 
             // label3
             // 

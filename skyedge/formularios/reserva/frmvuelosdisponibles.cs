@@ -1,5 +1,6 @@
 ﻿using skyedge.clases;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -47,7 +48,7 @@ namespace skyedge.formularios
                     foreach (DataRow row in dt.Rows)
                     {
                         dgvida.Rows.Add(
-                            false, 
+                            false,
                             row["origen_ida"].ToString(),
                             row["destino_ida"].ToString(),
                             Convert.ToDateTime(row["fecha_ida"]).ToString("dd/MM/yyyy"),
@@ -59,7 +60,6 @@ namespace skyedge.formularios
                 }
             }
         }
-
 
         private void LlenarDataGridViewVuelta()
         {
@@ -95,19 +95,47 @@ namespace skyedge.formularios
         {
             LlenarDataGridViewIda();
             LlenarDataGridViewVuelta();
- 
+        }
+
+        private List<DataGridViewRow> ObtenerFilasSeleccionadasIda()
+        {
+            List<DataGridViewRow> filasSeleccionadas = new List<DataGridViewRow>();
+            foreach (DataGridViewRow fila in dgvida.Rows)
+            {
+                if (fila.DataBoundItem != null && fila.Cells[0].Value != null && (bool)fila.Cells[0].Value)
+                {
+                    filasSeleccionadas.Add(fila);
+                }
+            }
+            return filasSeleccionadas;
+        }
+
+        private List<DataGridViewRow> ObtenerFilasSeleccionadasVuelta()
+        {
+            List<DataGridViewRow> filasSeleccionadas = new List<DataGridViewRow>();
+            foreach (DataGridViewRow fila in dgvvuelta.Rows)
+            {
+                if (fila.DataBoundItem != null && fila.Cells[0].Value != null && (bool)fila.Cells[0].Value)
+                {
+                    filasSeleccionadas.Add(fila);
+                }
+            }
+            return filasSeleccionadas;
         }
 
         private void btncontinuar_Click(object sender, EventArgs e)
         {
-            frminfopasajeros frmA = new frminfopasajeros();
+            List<DataGridViewRow> filasIdaSeleccionadas = ObtenerFilasSeleccionadasIda();
+            List<DataGridViewRow> filasVueltaSeleccionadas = ObtenerFilasSeleccionadasVuelta();
+
+            frminfopasajeros frmA = new frminfopasajeros(filasIdaSeleccionadas, filasVueltaSeleccionadas);
             frmA.dgvinfopasajeros.Rows.Add(Int32.Parse(lblpasajeros.Text));
             frmA.Show();
         }
 
         private void dgvvuelta_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            // No es necesario implementar nada aquí, ya que esta función se activa cuando se hace clic en cualquier celda del DataGridView de vuelta.
         }
     }
 }
